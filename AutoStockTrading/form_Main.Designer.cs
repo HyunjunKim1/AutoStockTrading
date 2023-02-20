@@ -30,26 +30,26 @@ namespace AutoStockTrading
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main));
-            this.axKHOpenAPI1 = new AxKHOpenAPILib.AxKHOpenAPI();
+            this.axKHOpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.종료ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI1)).BeginInit();
+            this.m_Menu_Login = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_Menu_Logout = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_Menu_Status = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_Menu_Account = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_Menu_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // axKHOpenAPI1
+            // axKHOpenAPI
             // 
-            this.axKHOpenAPI1.Enabled = true;
-            this.axKHOpenAPI1.Location = new System.Drawing.Point(917, 560);
-            this.axKHOpenAPI1.Name = "axKHOpenAPI1";
-            this.axKHOpenAPI1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axKHOpenAPI1.OcxState")));
-            this.axKHOpenAPI1.Size = new System.Drawing.Size(90, 37);
-            this.axKHOpenAPI1.TabIndex = 0;
+            this.axKHOpenAPI.Enabled = true;
+            this.axKHOpenAPI.Location = new System.Drawing.Point(917, 560);
+            this.axKHOpenAPI.Name = "axKHOpenAPI";
+            this.axKHOpenAPI.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axKHOpenAPI.OcxState")));
+            this.axKHOpenAPI.Size = new System.Drawing.Size(100, 50);
+            this.axKHOpenAPI.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -64,55 +64,57 @@ namespace AutoStockTrading
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginToolStripMenuItem,
-            this.logToolStripMenuItem,
-            this.statusToolStripMenuItem,
-            this.종료ToolStripMenuItem,
-            this.종료ToolStripMenuItem1});
+            this.m_Menu_Login,
+            this.m_Menu_Logout,
+            this.m_Menu_Status,
+            this.m_Menu_Account,
+            this.m_Menu_Exit});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // loginToolStripMenuItem
+            // m_Menu_Login
             // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loginToolStripMenuItem.Text = "로그인";
+            this.m_Menu_Login.Name = "m_Menu_Login";
+            this.m_Menu_Login.Size = new System.Drawing.Size(180, 22);
+            this.m_Menu_Login.Text = "로그인";
+            this.m_Menu_Login.Click += new System.EventHandler(this.m_Menu_Login_Click);
             // 
-            // logToolStripMenuItem
+            // m_Menu_Logout
             // 
-            this.logToolStripMenuItem.Name = "logToolStripMenuItem";
-            this.logToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logToolStripMenuItem.Text = "로그아웃";
+            this.m_Menu_Logout.Name = "m_Menu_Logout";
+            this.m_Menu_Logout.Size = new System.Drawing.Size(180, 22);
+            this.m_Menu_Logout.Text = "로그아웃";
+            this.m_Menu_Logout.Click += new System.EventHandler(this.m_Menu_Logout_Click);
             // 
-            // statusToolStripMenuItem
+            // m_Menu_Status
             // 
-            this.statusToolStripMenuItem.Name = "statusToolStripMenuItem";
-            this.statusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.statusToolStripMenuItem.Text = "접속상태";
+            this.m_Menu_Status.Name = "m_Menu_Status";
+            this.m_Menu_Status.Size = new System.Drawing.Size(180, 22);
+            this.m_Menu_Status.Text = "접속상태";
             // 
-            // 종료ToolStripMenuItem
+            // m_Menu_Account
             // 
-            this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
-            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.종료ToolStripMenuItem.Text = "계좌조회";
+            this.m_Menu_Account.Name = "m_Menu_Account";
+            this.m_Menu_Account.Size = new System.Drawing.Size(180, 22);
+            this.m_Menu_Account.Text = "계좌조회";
             // 
-            // 종료ToolStripMenuItem1
+            // m_Menu_Exit
             // 
-            this.종료ToolStripMenuItem1.Name = "종료ToolStripMenuItem1";
-            this.종료ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.종료ToolStripMenuItem1.Text = "종료";
+            this.m_Menu_Exit.Name = "m_Menu_Exit";
+            this.m_Menu_Exit.Size = new System.Drawing.Size(180, 22);
+            this.m_Menu_Exit.Text = "종료";
             // 
             // form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 609);
-            this.Controls.Add(this.axKHOpenAPI1);
+            this.Controls.Add(this.axKHOpenAPI);
             this.Controls.Add(this.menuStrip1);
             this.Name = "form_Main";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -122,14 +124,14 @@ namespace AutoStockTrading
 
         #endregion
 
-        private AxKHOpenAPILib.AxKHOpenAPI axKHOpenAPI1;
+        private AxKHOpenAPILib.AxKHOpenAPI axKHOpenAPI;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statusToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 종료ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 종료ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem m_Menu_Login;
+        private System.Windows.Forms.ToolStripMenuItem m_Menu_Logout;
+        private System.Windows.Forms.ToolStripMenuItem m_Menu_Status;
+        private System.Windows.Forms.ToolStripMenuItem m_Menu_Account;
+        private System.Windows.Forms.ToolStripMenuItem m_Menu_Exit;
     }
 }
 
