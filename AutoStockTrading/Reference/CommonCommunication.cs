@@ -13,9 +13,9 @@ namespace AutoStockTrading.Reference
 
         }
 
-        public int Login()
-        {
-            
-        }
+        //public int Login()
+        //{
+        //    
+        //}
     }
 }

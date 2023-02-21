@@ -29,6 +29,29 @@ namespace AutoStockTrading.Reference
         public CommonLog            Log;
         // ===================================================
 
+        #region Global Function
 
+        public void AddLog(string Msg)
+        {
+            string Time = string.Empty;
+            string Content = string.Empty;
+
+            //Time = DateTime.Now.ToString("hh:mm:ss:fff");
+
+            Time = DateTime.Now.ToString("HH:mm:ss:fff");
+
+            Content = "[" + Time + "] " + Msg; // [19:23:34:212] Logging this way.
+
+            Log.AddLog(Content);
+
+            if (frm_Main != null)
+            {
+                frm_Main.Invoke(new Action(delegate
+                {
+                    frm_Main.lbl_Log.Text = Content;
+                }));
+            }
+        }
+        #endregion
     }
 }
