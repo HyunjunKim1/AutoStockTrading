@@ -12,6 +12,7 @@ namespace AutoStockTrading
 {
     public partial class form_Splash : Form
     {
+        
         public form_Splash()
         {
             InitializeComponent();

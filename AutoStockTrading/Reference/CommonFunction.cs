@@ -20,36 +20,31 @@ namespace AutoStockTrading.Reference
             }
         }
 
-        // Forms =============================================
-        public form_Main frm_Main;
-        // ===================================================
+        // Global Class 정의 =============================================
+        public FormManager Form             = new FormManager();
 
-        // Class =============================================
-        public CommonCommunication  Comm;
-        public CommonLog            Log;
+        // 기능 Class =============================================
+        public CommonCommunication Comm     = new CommonCommunication();
+        public CommonLog Log                = new CommonLog();
         // ===================================================
 
         #region Global Function
 
         public void AddLog(string Msg)
         {
-            string Time = string.Empty;
-            string Content = string.Empty;
+            Msg = $"[{DateTime.Now:HH:mm:ss:fff}] {Msg}"; // [19:23:34:212] Blah, blah, blah.
+            Log.AddLog(Msg);
+        }
+        public void Delay(int nMilliseconds)
+        {
+            DateTime _dtNow = DateTime.Now;
+            TimeSpan _tsDuration = new TimeSpan(0, 0, 0, 0, nMilliseconds);
+            DateTime _dtAfterWards = _dtNow.Add(_tsDuration);
 
-            //Time = DateTime.Now.ToString("hh:mm:ss:fff");
-
-            Time = DateTime.Now.ToString("HH:mm:ss:fff");
-
-            Content = "[" + Time + "] " + Msg; // [19:23:34:212] Logging this way.
-
-            Log.AddLog(Content);
-
-            if (frm_Main != null)
+            while (_dtAfterWards >= _dtNow)
             {
-                frm_Main.Invoke(new Action(delegate
-                {
-                    frm_Main.lbl_Log.Text = Content;
-                }));
+                Application.DoEvents();
+                _dtNow = DateTime.Now;
             }
         }
         #endregion
