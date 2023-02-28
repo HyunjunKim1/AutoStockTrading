@@ -21,6 +21,7 @@ namespace AutoStockTrading
             InitializeComponent();
         }
 
+        private int _scrNum = 5000;
 
         #region Form Events
 
@@ -44,6 +45,11 @@ namespace AutoStockTrading
              * Message창 띄울건지 아니면 그냥 Exit 시킬건지 정해야함.
              * 우선 Exit을 시키는식으로 구현
              */
+
+            DisconnectAllRealData();
+            axKHOpenAPI.CommTerminate();
+
+            Global.AddLog("[System] Logout.");
         }
 
         private void m_Menu_Exit_Click(object sender, EventArgs e)
@@ -53,5 +59,14 @@ namespace AutoStockTrading
 
         #endregion
 
+        private void DisconnectAllRealData()
+        {
+            for (int i = _scrNum; i > 5000; i--)
+            {
+                axKHOpenAPI.DisconnectRealData(i.ToString());
+            }
+
+            _scrNum = 5000;
+        }
     }
 }
