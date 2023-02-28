@@ -59,6 +59,10 @@ namespace AutoStockTrading
 
         #endregion
 
+        public void ChangeMainButtonColor(FORM_NAME form, bool isActivateColor) // ...FORM추가... 
+        {
+            if (this.InvokeRequired) { this.BeginInvoke(new Action(() => { ChangeMainButtonColor(form, isActivateColor); })); return; }
+        }
         private void DisconnectAllRealData()
         {
             for (int i = _scrNum; i > 5000; i--)
