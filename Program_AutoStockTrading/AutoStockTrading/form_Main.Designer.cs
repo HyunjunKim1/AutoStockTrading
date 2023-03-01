@@ -62,6 +62,7 @@ namespace AutoStockTrading
             this.axKHOpenAPI.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axKHOpenAPI.OcxState")));
             this.axKHOpenAPI.Size = new System.Drawing.Size(100, 50);
             this.axKHOpenAPI.TabIndex = 0;
+            this.axKHOpenAPI.OnEventConnect += new AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEventHandler(this.axKHOpenAPI_OnEventConnect);
             // 
             // lbl_Log
             // 

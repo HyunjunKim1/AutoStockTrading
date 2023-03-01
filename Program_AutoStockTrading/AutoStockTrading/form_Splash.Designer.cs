@@ -31,18 +31,9 @@ namespace AutoStockTrading
         {
             this.components = new System.ComponentModel.Container();
             this.gBox_Status = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pBox_ThermalChuck = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pBox_CreateForms = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pBox_Illuminator = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pBox_IO = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pBox_LoadIniFiles = new System.Windows.Forms.PictureBox();
@@ -53,14 +44,8 @@ namespace AutoStockTrading
             this.guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.gBox_Status.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox_ThermalChuck)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_CreateForms)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox_Illuminator)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox_IO)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_LoadIniFiles)).BeginInit();
             this.SuspendLayout();
@@ -68,10 +53,7 @@ namespace AutoStockTrading
             // gBox_Status
             // 
             this.gBox_Status.BorderRadius = 4;
-            this.gBox_Status.Controls.Add(this.panel8);
             this.gBox_Status.Controls.Add(this.panel5);
-            this.gBox_Status.Controls.Add(this.panel4);
-            this.gBox_Status.Controls.Add(this.panel3);
             this.gBox_Status.Controls.Add(this.panel2);
             this.gBox_Status.CustomBorderColor = System.Drawing.Color.Silver;
             this.gBox_Status.CustomBorderThickness = new System.Windows.Forms.Padding(0, 38, 0, 0);
@@ -84,44 +66,12 @@ namespace AutoStockTrading
             this.gBox_Status.TabIndex = 7;
             this.gBox_Status.Text = "Program Loading ...";
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.panel8.Controls.Add(this.label2);
-            this.panel8.Controls.Add(this.pBox_ThermalChuck);
-            this.panel8.Location = new System.Drawing.Point(3, 147);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(164, 28);
-            this.panel8.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(28, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Thermal Chuck";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pBox_ThermalChuck
-            // 
-            this.pBox_ThermalChuck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBox_ThermalChuck.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pBox_ThermalChuck.Location = new System.Drawing.Point(0, 0);
-            this.pBox_ThermalChuck.Name = "pBox_ThermalChuck";
-            this.pBox_ThermalChuck.Size = new System.Drawing.Size(28, 28);
-            this.pBox_ThermalChuck.TabIndex = 0;
-            this.pBox_ThermalChuck.TabStop = false;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.pBox_CreateForms);
-            this.panel5.Location = new System.Drawing.Point(3, 181);
+            this.panel5.Location = new System.Drawing.Point(3, 76);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(164, 28);
             this.panel5.TabIndex = 8;
@@ -147,70 +97,6 @@ namespace AutoStockTrading
             this.pBox_CreateForms.Size = new System.Drawing.Size(28, 28);
             this.pBox_CreateForms.TabIndex = 0;
             this.pBox_CreateForms.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.pBox_Illuminator);
-            this.panel4.Location = new System.Drawing.Point(3, 113);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(180, 28);
-            this.panel4.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(28, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 28);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Illuminator";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pBox_Illuminator
-            // 
-            this.pBox_Illuminator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBox_Illuminator.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pBox_Illuminator.Location = new System.Drawing.Point(0, 0);
-            this.pBox_Illuminator.Name = "pBox_Illuminator";
-            this.pBox_Illuminator.Size = new System.Drawing.Size(28, 28);
-            this.pBox_Illuminator.TabIndex = 0;
-            this.pBox_Illuminator.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.pBox_IO);
-            this.panel3.Location = new System.Drawing.Point(3, 79);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(164, 28);
-            this.panel3.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(28, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 28);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "I/O board";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pBox_IO
-            // 
-            this.pBox_IO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBox_IO.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pBox_IO.Location = new System.Drawing.Point(0, 0);
-            this.pBox_IO.Name = "pBox_IO";
-            this.pBox_IO.Size = new System.Drawing.Size(28, 28);
-            this.pBox_IO.TabIndex = 0;
-            this.pBox_IO.TabStop = false;
             // 
             // panel2
             // 
@@ -318,14 +204,8 @@ namespace AutoStockTrading
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_Splash";
             this.gBox_Status.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pBox_ThermalChuck)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBox_CreateForms)).EndInit();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pBox_Illuminator)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pBox_IO)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBox_LoadIniFiles)).EndInit();
             this.ResumeLayout(false);
@@ -335,18 +215,9 @@ namespace AutoStockTrading
         #endregion
 
         private Guna.UI2.WinForms.Guna2GroupBox gBox_Status;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pBox_ThermalChuck;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pBox_CreateForms;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pBox_Illuminator;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pBox_IO;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pBox_LoadIniFiles;

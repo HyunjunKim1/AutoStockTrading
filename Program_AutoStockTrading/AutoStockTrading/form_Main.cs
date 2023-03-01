@@ -72,5 +72,21 @@ namespace AutoStockTrading
 
             _scrNum = 5000;
         }
+
+        #region 키움 API 이벤트들
+
+        private void axKHOpenAPI_OnEventConnect(object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
+        {
+            if (Error.IsError(e.nErrCode))
+            {
+                Global.AddLog($"[System] Login - " + Error.GetErrorMessage());
+            }
+            else
+            {
+                Global.AddLog($"[System] Login - " + Error.GetErrorMessage());
+            }
+        }
+
+        #endregion
     }
 }

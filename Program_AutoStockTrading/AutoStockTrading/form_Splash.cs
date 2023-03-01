@@ -31,8 +31,13 @@ namespace AutoStockTrading
         private void Loading()
         {
             switch (_step)
-            {
-                case 0:
+            { 
+                // 넣어야할 내용들 .... 뭐뭐가 있을까?
+                // 1. form 생성하는거 넣어야함.
+                // 2. 필요 Ini 파일들 불러오는 부분 넣어야함.
+
+
+                case 30:
                     break;
 
                 case 100:
