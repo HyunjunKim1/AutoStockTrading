@@ -33,19 +33,25 @@ namespace AutoStockTrading
             this.axKHOpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
             this.lbl_Log = new System.Windows.Forms.Label();
             this.pnl_Main = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnl_MarginRight = new System.Windows.Forms.Panel();
-            this.pnl_MarginLeft = new System.Windows.Forms.Panel();
-            this.pnl_MarginBottom = new System.Windows.Forms.Panel();
-            this.pnl_MarginTop = new System.Windows.Forms.Panel();
             this.pnl_Title = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbl_Version = new System.Windows.Forms.Label();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Btn_Close = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pnl_MarginRight = new System.Windows.Forms.Panel();
+            this.pnl_MarginLeft = new System.Windows.Forms.Panel();
+            this.pnl_MarginBottom = new System.Windows.Forms.Panel();
+            this.pnl_MarginTop = new System.Windows.Forms.Panel();
+            this.pnl_StatusIcon = new System.Windows.Forms.Panel();
+            this.iBtn_Status = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.pnl_Dock1 = new System.Windows.Forms.Panel();
+            this.pnl_Dock2 = new System.Windows.Forms.Panel();
+            this.pnl_Dock3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).BeginInit();
             this.pnl_Main.SuspendLayout();
             this.pnl_Title.SuspendLayout();
+            this.pnl_StatusIcon.SuspendLayout();
             this.SuspendLayout();
             // 
             // axKHOpenAPI
@@ -73,52 +79,16 @@ namespace AutoStockTrading
             // pnl_Main
             // 
             this.pnl_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.pnl_Main.Controls.Add(this.pnl_Dock3);
+            this.pnl_Main.Controls.Add(this.pnl_Dock2);
+            this.pnl_Main.Controls.Add(this.pnl_Dock1);
+            this.pnl_Main.Controls.Add(this.pnl_StatusIcon);
             this.pnl_Main.Controls.Add(this.pnl_Title);
             this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Main.Location = new System.Drawing.Point(5, 5);
             this.pnl_Main.Name = "pnl_Main";
             this.pnl_Main.Size = new System.Drawing.Size(1009, 574);
             this.pnl_Main.TabIndex = 3;
-            // 
-            // pnl_MarginRight
-            // 
-            this.pnl_MarginRight.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_MarginRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_MarginRight.Enabled = false;
-            this.pnl_MarginRight.Location = new System.Drawing.Point(1014, 0);
-            this.pnl_MarginRight.Name = "pnl_MarginRight";
-            this.pnl_MarginRight.Size = new System.Drawing.Size(5, 584);
-            this.pnl_MarginRight.TabIndex = 6;
-            // 
-            // pnl_MarginLeft
-            // 
-            this.pnl_MarginLeft.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_MarginLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_MarginLeft.Enabled = false;
-            this.pnl_MarginLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnl_MarginLeft.Name = "pnl_MarginLeft";
-            this.pnl_MarginLeft.Size = new System.Drawing.Size(5, 584);
-            this.pnl_MarginLeft.TabIndex = 7;
-            // 
-            // pnl_MarginBottom
-            // 
-            this.pnl_MarginBottom.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_MarginBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_MarginBottom.Enabled = false;
-            this.pnl_MarginBottom.Location = new System.Drawing.Point(5, 579);
-            this.pnl_MarginBottom.Name = "pnl_MarginBottom";
-            this.pnl_MarginBottom.Size = new System.Drawing.Size(1009, 5);
-            this.pnl_MarginBottom.TabIndex = 8;
-            // 
-            // pnl_MarginTop
-            // 
-            this.pnl_MarginTop.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_MarginTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_MarginTop.Enabled = false;
-            this.pnl_MarginTop.Location = new System.Drawing.Point(5, 0);
-            this.pnl_MarginTop.Name = "pnl_MarginTop";
-            this.pnl_MarginTop.Size = new System.Drawing.Size(1009, 5);
-            this.pnl_MarginTop.TabIndex = 9;
             // 
             // pnl_Title
             // 
@@ -135,6 +105,17 @@ namespace AutoStockTrading
             this.pnl_Title.Name = "pnl_Title";
             this.pnl_Title.Size = new System.Drawing.Size(1009, 27);
             this.pnl_Title.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 27);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Auto Stock Trading";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lbl_Version
             // 
@@ -186,16 +167,105 @@ namespace AutoStockTrading
             this.Btn_Close.Size = new System.Drawing.Size(30, 27);
             this.Btn_Close.TabIndex = 1;
             // 
-            // label1
+            // pnl_MarginRight
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 27);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Auto Stock Trading";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.pnl_MarginRight.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_MarginRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnl_MarginRight.Enabled = false;
+            this.pnl_MarginRight.Location = new System.Drawing.Point(1014, 0);
+            this.pnl_MarginRight.Name = "pnl_MarginRight";
+            this.pnl_MarginRight.Size = new System.Drawing.Size(5, 584);
+            this.pnl_MarginRight.TabIndex = 6;
+            // 
+            // pnl_MarginLeft
+            // 
+            this.pnl_MarginLeft.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_MarginLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_MarginLeft.Enabled = false;
+            this.pnl_MarginLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnl_MarginLeft.Name = "pnl_MarginLeft";
+            this.pnl_MarginLeft.Size = new System.Drawing.Size(5, 584);
+            this.pnl_MarginLeft.TabIndex = 7;
+            // 
+            // pnl_MarginBottom
+            // 
+            this.pnl_MarginBottom.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_MarginBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_MarginBottom.Enabled = false;
+            this.pnl_MarginBottom.Location = new System.Drawing.Point(5, 579);
+            this.pnl_MarginBottom.Name = "pnl_MarginBottom";
+            this.pnl_MarginBottom.Size = new System.Drawing.Size(1009, 5);
+            this.pnl_MarginBottom.TabIndex = 8;
+            // 
+            // pnl_MarginTop
+            // 
+            this.pnl_MarginTop.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_MarginTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_MarginTop.Enabled = false;
+            this.pnl_MarginTop.Location = new System.Drawing.Point(5, 0);
+            this.pnl_MarginTop.Name = "pnl_MarginTop";
+            this.pnl_MarginTop.Size = new System.Drawing.Size(1009, 5);
+            this.pnl_MarginTop.TabIndex = 9;
+            // 
+            // pnl_StatusIcon
+            // 
+            this.pnl_StatusIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.pnl_StatusIcon.Controls.Add(this.iBtn_Status);
+            this.pnl_StatusIcon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_StatusIcon.Location = new System.Drawing.Point(0, 27);
+            this.pnl_StatusIcon.Name = "pnl_StatusIcon";
+            this.pnl_StatusIcon.Size = new System.Drawing.Size(32, 547);
+            this.pnl_StatusIcon.TabIndex = 3;
+            // 
+            // iBtn_Status
+            // 
+            this.iBtn_Status.BackColor = System.Drawing.Color.Transparent;
+            this.iBtn_Status.CheckedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.iBtn_Status.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iBtn_Status.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.iBtn_Status.Image = ((System.Drawing.Image)(resources.GetObject("iBtn_Status.Image")));
+            this.iBtn_Status.ImageOffset = new System.Drawing.Point(0, 0);
+            this.iBtn_Status.ImageRotate = 0F;
+            this.iBtn_Status.ImageSize = new System.Drawing.Size(30, 30);
+            this.iBtn_Status.Location = new System.Drawing.Point(0, 0);
+            this.iBtn_Status.Name = "iBtn_Status";
+            this.iBtn_Status.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.iBtn_Status.Size = new System.Drawing.Size(32, 37);
+            this.iBtn_Status.TabIndex = 3;
+            this.iBtn_Status.Tag = "STATUS";
+            // 
+            // pnl_Dock1
+            // 
+            this.pnl_Dock1.AutoScroll = true;
+            this.pnl_Dock1.AutoScrollMargin = new System.Drawing.Size(0, 1);
+            this.pnl_Dock1.AutoScrollMinSize = new System.Drawing.Size(0, 1);
+            this.pnl_Dock1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_Dock1.Location = new System.Drawing.Point(32, 27);
+            this.pnl_Dock1.Name = "pnl_Dock1";
+            this.pnl_Dock1.Size = new System.Drawing.Size(312, 547);
+            this.pnl_Dock1.TabIndex = 4;
+            // 
+            // pnl_Dock2
+            // 
+            this.pnl_Dock2.AutoScroll = true;
+            this.pnl_Dock2.AutoScrollMargin = new System.Drawing.Size(0, 1);
+            this.pnl_Dock2.AutoScrollMinSize = new System.Drawing.Size(0, 1);
+            this.pnl_Dock2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Dock2.Location = new System.Drawing.Point(344, 27);
+            this.pnl_Dock2.Name = "pnl_Dock2";
+            this.pnl_Dock2.Size = new System.Drawing.Size(665, 547);
+            this.pnl_Dock2.TabIndex = 5;
+            // 
+            // pnl_Dock3
+            // 
+            this.pnl_Dock3.AutoScroll = true;
+            this.pnl_Dock3.AutoScrollMargin = new System.Drawing.Size(0, 1);
+            this.pnl_Dock3.AutoScrollMinSize = new System.Drawing.Size(0, 1);
+            this.pnl_Dock3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnl_Dock3.Location = new System.Drawing.Point(705, 27);
+            this.pnl_Dock3.Name = "pnl_Dock3";
+            this.pnl_Dock3.Size = new System.Drawing.Size(304, 547);
+            this.pnl_Dock3.TabIndex = 6;
             // 
             // form_Main
             // 
@@ -215,6 +285,7 @@ namespace AutoStockTrading
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).EndInit();
             this.pnl_Main.ResumeLayout(false);
             this.pnl_Title.ResumeLayout(false);
+            this.pnl_StatusIcon.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -234,6 +305,11 @@ namespace AutoStockTrading
         private System.Windows.Forms.Panel pnl_MarginBottom;
         private System.Windows.Forms.Panel pnl_MarginTop;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnl_Dock3;
+        private System.Windows.Forms.Panel pnl_Dock2;
+        private System.Windows.Forms.Panel pnl_Dock1;
+        private System.Windows.Forms.Panel pnl_StatusIcon;
+        private Guna.UI2.WinForms.Guna2ImageButton iBtn_Status;
     }
 }
 

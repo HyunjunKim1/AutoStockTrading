@@ -27,6 +27,7 @@ namespace AutoStockTrading.Reference
         // 기능 Class =============================================
         public CommonCommunication Comm     = new CommonCommunication();
         public CommonLog Log                = new CommonLog();
+        public CommonTimeOut Timeout        = new CommonTimeOut();
         // ===================================================
 
         #region Global Function

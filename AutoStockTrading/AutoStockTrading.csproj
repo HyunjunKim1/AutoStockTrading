@@ -73,6 +73,7 @@
     <Compile Include="Reference\CommonCommunication.cs" />
     <Compile Include="Reference\CommonFunction.cs" />
     <Compile Include="Reference\CommonLog.cs" />
+    <Compile Include="Reference\CommonTimeOut.cs" />
     <Compile Include="Reference\FormManager.cs" />
     <Compile Include="Reference\KiwoomCode.cs" />
     <Compile Include="Reference\WhileThread.cs" />
