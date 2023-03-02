@@ -50,19 +50,6 @@ namespace AutoStockTrading
             this.Close();
         }
 
-        private void m_Menu_Logout_Click(object sender, EventArgs e)
-        {
-            /*
-             * Message창 띄울건지 아니면 그냥 Exit 시킬건지 정해야함.
-             * 우선 Exit을 시키는식으로 구현
-             */
-
-            DisconnectAllRealData();
-            axKHOpenAPI.CommTerminate();
-
-            Global.AddLog("[System] Logout.");
-        }
-
         #endregion
 
         public void ChangeMainButtonColor(FORM_NAME form, bool isActivateColor) // ...FORM추가... 
