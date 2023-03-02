@@ -1,4 +1,5 @@
 ﻿using AutoStockTrading.Reference;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,6 +63,38 @@ namespace AutoStockTrading
         public void ChangeMainButtonColor(FORM_NAME form, bool isActivateColor) // ...FORM추가... 
         {
             if (this.InvokeRequired) { this.BeginInvoke(new Action(() => { ChangeMainButtonColor(form, isActivateColor); })); return; }
+
+            switch(form)
+            {
+                case FORM_NAME.STATUS:
+                    ChangeImageButtonImage(iBtn_Status, isActivateColor ? Properties.Resources.STATUS_ON : Properties.Resources.STATUS_OFF);
+                    break;
+
+                case FORM_NAME.LOG:
+                    ChangeImageButtonImage(iBtn_Log, isActivateColor ? Properties.Resources.LOG_ON : Properties.Resources.LOG_OFF);
+                    break;
+            }
+        }
+        private void ChangeImageButtonImage(Guna2ImageButton control, Bitmap image)
+        {
+            using (Image oldImage = control.Image)
+            {
+                control.Image = image;
+            }
+        }
+        private void iBtn_Dockable_Click(object sender, EventArgs e)
+        {
+            FORM_NAME tag = (FORM_NAME)Enum.Parse(typeof(FORM_NAME), (sender as Guna2ImageButton).Tag.ToString());
+
+            switch (tag)
+            {
+                case FORM_NAME.STATUS:
+                    Global.Form.DockOrHide(Global.Form.Status);
+                    break;
+                case FORM_NAME.LOG:
+                    Global.Form.DockOrHide(Global.Form.Log);
+                    break;
+            }
         }
         private void DisconnectAllRealData()
         {

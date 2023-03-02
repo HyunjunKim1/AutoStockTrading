@@ -33,7 +33,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BaseForm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BIN_AutoStockTrading\BaseForm.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.Charts.WinForms, Version=1.0.4.0, Culture=neutral, PublicKeyToken=70866663edbc6595, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.Charts.WinForms.1.0.4\lib\net40\Guna.Charts.WinForms.dll</HintPath>
     </Reference>
@@ -56,6 +64,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\form_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\form_Log.Designer.cs">
+      <DependentUpon>form_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\form_Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\form_Status.Designer.cs">
+      <DependentUpon>form_Status.cs</DependentUpon>
+    </Compile>
     <Compile Include="form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +97,9 @@
     <Compile Include="Reference\FormManager.cs" />
     <Compile Include="Reference\KiwoomCode.cs" />
     <Compile Include="Reference\WhileThread.cs" />
+    <EmbeddedResource Include="Forms\form_Log.resx">
+      <DependentUpon>form_Log.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form_Main.resx">
       <DependentUpon>form_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +116,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -126,8 +150,18 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Forms\" />
+    <None Include="Resources\LOG_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOG_OFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STATUS_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STATUS_OFF.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

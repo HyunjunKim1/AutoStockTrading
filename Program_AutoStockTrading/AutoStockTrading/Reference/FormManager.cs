@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using AutoStockTrading.Forms;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,13 +16,16 @@ namespace AutoStockTrading.Reference
     public enum FORM_NAME // ...FORM추가...
     {
         LOG,
+        STATUS,
         SEARCH_CODE,
         SEARCH_NAME,
         
     }
     class FormManager
     {
-        public form_Main Main;
+        public form_Main    Main;
+        public form_Status  Status;
+        public form_Log     Log;
 
 
         List<(Panel panel, Form form)> _pairList = new List<(Panel panel, Form form)>();

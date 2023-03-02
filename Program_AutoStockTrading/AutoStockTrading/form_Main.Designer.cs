@@ -33,6 +33,10 @@ namespace AutoStockTrading
             this.axKHOpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
             this.lbl_Log = new System.Windows.Forms.Label();
             this.pnl_Main = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnl_Dock3 = new System.Windows.Forms.Panel();
+            this.pnl_Dock2 = new System.Windows.Forms.Panel();
+            this.pnl_Dock1 = new System.Windows.Forms.Panel();
+            this.pnl_StatusIcon = new System.Windows.Forms.Panel();
             this.pnl_Title = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Version = new System.Windows.Forms.Label();
@@ -43,15 +47,12 @@ namespace AutoStockTrading
             this.pnl_MarginLeft = new System.Windows.Forms.Panel();
             this.pnl_MarginBottom = new System.Windows.Forms.Panel();
             this.pnl_MarginTop = new System.Windows.Forms.Panel();
-            this.pnl_StatusIcon = new System.Windows.Forms.Panel();
+            this.iBtn_Log = new Guna.UI2.WinForms.Guna2ImageButton();
             this.iBtn_Status = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.pnl_Dock1 = new System.Windows.Forms.Panel();
-            this.pnl_Dock2 = new System.Windows.Forms.Panel();
-            this.pnl_Dock3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).BeginInit();
             this.pnl_Main.SuspendLayout();
-            this.pnl_Title.SuspendLayout();
             this.pnl_StatusIcon.SuspendLayout();
+            this.pnl_Title.SuspendLayout();
             this.SuspendLayout();
             // 
             // axKHOpenAPI
@@ -90,6 +91,50 @@ namespace AutoStockTrading
             this.pnl_Main.Name = "pnl_Main";
             this.pnl_Main.Size = new System.Drawing.Size(1009, 574);
             this.pnl_Main.TabIndex = 3;
+            // 
+            // pnl_Dock3
+            // 
+            this.pnl_Dock3.AutoScroll = true;
+            this.pnl_Dock3.AutoScrollMargin = new System.Drawing.Size(0, 1);
+            this.pnl_Dock3.AutoScrollMinSize = new System.Drawing.Size(0, 1);
+            this.pnl_Dock3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnl_Dock3.Location = new System.Drawing.Point(705, 27);
+            this.pnl_Dock3.Name = "pnl_Dock3";
+            this.pnl_Dock3.Size = new System.Drawing.Size(304, 547);
+            this.pnl_Dock3.TabIndex = 6;
+            // 
+            // pnl_Dock2
+            // 
+            this.pnl_Dock2.AutoScroll = true;
+            this.pnl_Dock2.AutoScrollMargin = new System.Drawing.Size(0, 1);
+            this.pnl_Dock2.AutoScrollMinSize = new System.Drawing.Size(0, 1);
+            this.pnl_Dock2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Dock2.Location = new System.Drawing.Point(344, 27);
+            this.pnl_Dock2.Name = "pnl_Dock2";
+            this.pnl_Dock2.Size = new System.Drawing.Size(665, 547);
+            this.pnl_Dock2.TabIndex = 5;
+            // 
+            // pnl_Dock1
+            // 
+            this.pnl_Dock1.AutoScroll = true;
+            this.pnl_Dock1.AutoScrollMargin = new System.Drawing.Size(0, 1);
+            this.pnl_Dock1.AutoScrollMinSize = new System.Drawing.Size(0, 1);
+            this.pnl_Dock1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_Dock1.Location = new System.Drawing.Point(32, 27);
+            this.pnl_Dock1.Name = "pnl_Dock1";
+            this.pnl_Dock1.Size = new System.Drawing.Size(312, 547);
+            this.pnl_Dock1.TabIndex = 4;
+            // 
+            // pnl_StatusIcon
+            // 
+            this.pnl_StatusIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.pnl_StatusIcon.Controls.Add(this.iBtn_Log);
+            this.pnl_StatusIcon.Controls.Add(this.iBtn_Status);
+            this.pnl_StatusIcon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_StatusIcon.Location = new System.Drawing.Point(0, 27);
+            this.pnl_StatusIcon.Name = "pnl_StatusIcon";
+            this.pnl_StatusIcon.Size = new System.Drawing.Size(32, 547);
+            this.pnl_StatusIcon.TabIndex = 3;
             // 
             // pnl_Title
             // 
@@ -208,15 +253,22 @@ namespace AutoStockTrading
             this.pnl_MarginTop.Size = new System.Drawing.Size(1009, 5);
             this.pnl_MarginTop.TabIndex = 9;
             // 
-            // pnl_StatusIcon
+            // iBtn_Log
             // 
-            this.pnl_StatusIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.pnl_StatusIcon.Controls.Add(this.iBtn_Status);
-            this.pnl_StatusIcon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_StatusIcon.Location = new System.Drawing.Point(0, 27);
-            this.pnl_StatusIcon.Name = "pnl_StatusIcon";
-            this.pnl_StatusIcon.Size = new System.Drawing.Size(32, 547);
-            this.pnl_StatusIcon.TabIndex = 3;
+            this.iBtn_Log.BackColor = System.Drawing.Color.Transparent;
+            this.iBtn_Log.CheckedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.iBtn_Log.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iBtn_Log.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.iBtn_Log.Image = global::AutoStockTrading.Properties.Resources.LOG_OFF;
+            this.iBtn_Log.ImageOffset = new System.Drawing.Point(0, 0);
+            this.iBtn_Log.ImageRotate = 0F;
+            this.iBtn_Log.ImageSize = new System.Drawing.Size(30, 30);
+            this.iBtn_Log.Location = new System.Drawing.Point(0, 37);
+            this.iBtn_Log.Name = "iBtn_Log";
+            this.iBtn_Log.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.iBtn_Log.Size = new System.Drawing.Size(32, 37);
+            this.iBtn_Log.TabIndex = 4;
+            this.iBtn_Log.Tag = "LOG";
             // 
             // iBtn_Status
             // 
@@ -224,7 +276,7 @@ namespace AutoStockTrading
             this.iBtn_Status.CheckedState.ImageSize = new System.Drawing.Size(30, 30);
             this.iBtn_Status.Dock = System.Windows.Forms.DockStyle.Top;
             this.iBtn_Status.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.iBtn_Status.Image = ((System.Drawing.Image)(resources.GetObject("iBtn_Status.Image")));
+            this.iBtn_Status.Image = global::AutoStockTrading.Properties.Resources.STATUS_OFF;
             this.iBtn_Status.ImageOffset = new System.Drawing.Point(0, 0);
             this.iBtn_Status.ImageRotate = 0F;
             this.iBtn_Status.ImageSize = new System.Drawing.Size(30, 30);
@@ -234,39 +286,6 @@ namespace AutoStockTrading
             this.iBtn_Status.Size = new System.Drawing.Size(32, 37);
             this.iBtn_Status.TabIndex = 3;
             this.iBtn_Status.Tag = "STATUS";
-            // 
-            // pnl_Dock1
-            // 
-            this.pnl_Dock1.AutoScroll = true;
-            this.pnl_Dock1.AutoScrollMargin = new System.Drawing.Size(0, 1);
-            this.pnl_Dock1.AutoScrollMinSize = new System.Drawing.Size(0, 1);
-            this.pnl_Dock1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_Dock1.Location = new System.Drawing.Point(32, 27);
-            this.pnl_Dock1.Name = "pnl_Dock1";
-            this.pnl_Dock1.Size = new System.Drawing.Size(312, 547);
-            this.pnl_Dock1.TabIndex = 4;
-            // 
-            // pnl_Dock2
-            // 
-            this.pnl_Dock2.AutoScroll = true;
-            this.pnl_Dock2.AutoScrollMargin = new System.Drawing.Size(0, 1);
-            this.pnl_Dock2.AutoScrollMinSize = new System.Drawing.Size(0, 1);
-            this.pnl_Dock2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Dock2.Location = new System.Drawing.Point(344, 27);
-            this.pnl_Dock2.Name = "pnl_Dock2";
-            this.pnl_Dock2.Size = new System.Drawing.Size(665, 547);
-            this.pnl_Dock2.TabIndex = 5;
-            // 
-            // pnl_Dock3
-            // 
-            this.pnl_Dock3.AutoScroll = true;
-            this.pnl_Dock3.AutoScrollMargin = new System.Drawing.Size(0, 1);
-            this.pnl_Dock3.AutoScrollMinSize = new System.Drawing.Size(0, 1);
-            this.pnl_Dock3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_Dock3.Location = new System.Drawing.Point(705, 27);
-            this.pnl_Dock3.Name = "pnl_Dock3";
-            this.pnl_Dock3.Size = new System.Drawing.Size(304, 547);
-            this.pnl_Dock3.TabIndex = 6;
             // 
             // form_Main
             // 
@@ -285,8 +304,8 @@ namespace AutoStockTrading
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).EndInit();
             this.pnl_Main.ResumeLayout(false);
-            this.pnl_Title.ResumeLayout(false);
             this.pnl_StatusIcon.ResumeLayout(false);
+            this.pnl_Title.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -311,6 +330,7 @@ namespace AutoStockTrading
         private System.Windows.Forms.Panel pnl_Dock1;
         private System.Windows.Forms.Panel pnl_StatusIcon;
         private Guna.UI2.WinForms.Guna2ImageButton iBtn_Status;
+        private Guna.UI2.WinForms.Guna2ImageButton iBtn_Log;
     }
 }
 
