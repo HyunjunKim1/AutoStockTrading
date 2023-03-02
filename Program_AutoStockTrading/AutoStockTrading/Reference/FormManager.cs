@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static AutoStockTrading.Reference.CommonFunction;
@@ -72,6 +73,88 @@ namespace AutoStockTrading.Reference
                 Dock(form);
             else
                 Undock(form);
+        }
+        public void CreateFormWithUiThread(FORM_NAME name, bool dockable = true) // ...FORM추가...
+        {
+            Form form = null;
+
+            Thread thread = new Thread(() =>
+            {
+                switch (name)
+                {
+                    case FORM_NAME.STATUS:
+                        form = new form_Status();
+                        break;
+                    case FORM_NAME.LOG:
+                        form = new form_Log();
+                        break;
+                }
+
+                form.Opacity = 0;
+                form.Tag = name;
+                Application.Run(form);
+            });
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+
+            while (true)
+            {
+                if (form != null && form.IsHandleCreated)
+                    break;
+            }
+
+            form.Invoke(new Action(() =>
+            {
+                form.TopMost = true;
+                form.Visible = false;
+                form.Opacity = 100;
+            }));
+
+            ThreadSorting();
+
+            switch (name)
+            {
+                case FORM_NAME.STATUS:
+                    Status = (form_Status)form;
+                    break;
+                case FORM_NAME.LOG:
+                    Log = (form_Log)form;
+                    break;
+            }
+
+            if (dockable)
+            {
+                form.Resize += form_Resize;
+                form.FormClosing += form_FormClosing;
+                form.FormClosed += form_FormClosed;
+                form.VisibleChanged += form_VisibleChanged;
+                form.StyleChanged += form_StyleChanged;
+                foreach (Control ctrl in form.Controls)
+                {
+                    if (ctrl.Name == "pnl_Title")
+                    {
+                        Panel pnl_Title = (ctrl as Panel);
+                        foreach (Control innerCtrl in pnl_Title.Controls)
+                        {
+                            if (innerCtrl.Name == "iBtn_Popup")
+                            {
+                                innerCtrl.Click += iBtn_Popup_Click;
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                form.FormClosed += form_FormClosed;
+                _etcFormList.Add(form);
+            }
+
+            // 엔터키 방지 코드
+            AddPreventEvent(form);
         }
         private void form_Resize(object sender, EventArgs e)
         {
@@ -255,6 +338,33 @@ namespace AutoStockTrading.Reference
             {
                 control.GetType().GetProperty(propertyName).SetValue(control, value);
             }));
+        }
+        private void KeyDownEvt_PreventFocus(object sender, KeyEventArgs e)
+        {
+            var form = (sender as Control)?.FindForm();
+            if (form != null)
+                form.ActiveControl = null;
+        }
+
+        private void KeyDownEvt_PreventFocus(object sender, PreviewKeyDownEventArgs e)
+        {
+            var form = (sender as Control)?.FindForm();
+            if (form != null)
+                form.ActiveControl = null;
+        }
+        private void AddPreventEvent(Control container)
+        {
+            if (container.Controls.Count != 0)
+            {
+                foreach (Control control in container.Controls)
+                    AddPreventEvent(control);
+            }
+
+            if (container.Name.ToUpper().Contains("BTN"))
+            {
+                container.KeyDown += KeyDownEvt_PreventFocus;
+                container.PreviewKeyDown += KeyDownEvt_PreventFocus;
+            }
         }
     }
 }

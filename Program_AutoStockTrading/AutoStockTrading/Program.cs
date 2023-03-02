@@ -32,13 +32,13 @@ namespace AutoStockTrading
                     return;
                 }
 
-                // 관리자 권한인지 확인
-                if (false == new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator))
-                {
-                    MessageBox.Show("Please run program as administrator authority.");
-                    Application.Exit();
-                    return;
-                }
+                //// 관리자 권한인지 확인
+                //if (false == new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator))
+                //{
+                //    MessageBox.Show("Please run program as administrator authority.");
+                //    Application.Exit();
+                //    return;
+                //}
 
                 // 모니터 해상도가 변해도 비율 유지되도록 Dpi Awareness 끔.
                 Dpi.SetProcessDpiAwareness((int)Dpi.DpiAwareness.None);

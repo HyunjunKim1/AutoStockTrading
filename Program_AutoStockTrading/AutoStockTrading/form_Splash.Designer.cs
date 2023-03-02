@@ -33,20 +33,20 @@ namespace AutoStockTrading
             this.gBox_Status = new Guna.UI2.WinForms.Guna2GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pBox_CreateForms = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pBox_LoadIniFiles = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Version = new System.Windows.Forms.Label();
             this.btn_Close = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.pBox_CreateForms = new System.Windows.Forms.PictureBox();
+            this.pBox_LoadIniFiles = new System.Windows.Forms.PictureBox();
             this.gBox_Status.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox_CreateForms)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox_CreateForms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_LoadIniFiles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,16 +88,6 @@ namespace AutoStockTrading
             this.label6.Text = "Create Forms";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pBox_CreateForms
-            // 
-            this.pBox_CreateForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBox_CreateForms.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pBox_CreateForms.Location = new System.Drawing.Point(0, 0);
-            this.pBox_CreateForms.Name = "pBox_CreateForms";
-            this.pBox_CreateForms.Size = new System.Drawing.Size(28, 28);
-            this.pBox_CreateForms.TabIndex = 0;
-            this.pBox_CreateForms.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
@@ -119,16 +109,6 @@ namespace AutoStockTrading
             this.label4.TabIndex = 1;
             this.label4.Text = "Load Initial Files";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pBox_LoadIniFiles
-            // 
-            this.pBox_LoadIniFiles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBox_LoadIniFiles.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pBox_LoadIniFiles.Location = new System.Drawing.Point(0, 0);
-            this.pBox_LoadIniFiles.Name = "pBox_LoadIniFiles";
-            this.pBox_LoadIniFiles.Size = new System.Drawing.Size(28, 28);
-            this.pBox_LoadIniFiles.TabIndex = 0;
-            this.pBox_LoadIniFiles.TabStop = false;
             // 
             // label1
             // 
@@ -173,6 +153,7 @@ namespace AutoStockTrading
             this.btn_Close.Size = new System.Drawing.Size(180, 45);
             this.btn_Close.TabIndex = 10;
             this.btn_Close.Text = "Close";
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // guna2BorderlessForm1
             // 
@@ -189,6 +170,26 @@ namespace AutoStockTrading
             this.guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm2.TransparentWhileDrag = true;
             // 
+            // pBox_CreateForms
+            // 
+            this.pBox_CreateForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBox_CreateForms.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pBox_CreateForms.Location = new System.Drawing.Point(0, 0);
+            this.pBox_CreateForms.Name = "pBox_CreateForms";
+            this.pBox_CreateForms.Size = new System.Drawing.Size(28, 28);
+            this.pBox_CreateForms.TabIndex = 0;
+            this.pBox_CreateForms.TabStop = false;
+            // 
+            // pBox_LoadIniFiles
+            // 
+            this.pBox_LoadIniFiles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBox_LoadIniFiles.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pBox_LoadIniFiles.Location = new System.Drawing.Point(0, 0);
+            this.pBox_LoadIniFiles.Name = "pBox_LoadIniFiles";
+            this.pBox_LoadIniFiles.Size = new System.Drawing.Size(28, 28);
+            this.pBox_LoadIniFiles.TabIndex = 0;
+            this.pBox_LoadIniFiles.TabStop = false;
+            // 
             // form_Splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -203,10 +204,11 @@ namespace AutoStockTrading
             this.Name = "form_Splash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_Splash";
+            this.Load += new System.EventHandler(this.form_Splash_Load);
             this.gBox_Status.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pBox_CreateForms)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBox_CreateForms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_LoadIniFiles)).EndInit();
             this.ResumeLayout(false);
 

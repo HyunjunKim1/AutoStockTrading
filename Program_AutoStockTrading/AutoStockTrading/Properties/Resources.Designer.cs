@@ -63,6 +63,46 @@ namespace AutoStockTrading.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap CHECK_OFF {
+            get {
+                object obj = ResourceManager.GetObject("CHECK_OFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap CHECK_ON {
+            get {
+                object obj = ResourceManager.GetObject("CHECK_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap LED_GREEN {
+            get {
+                object obj = ResourceManager.GetObject("LED_GREEN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap LED_RED {
+            get {
+                object obj = ResourceManager.GetObject("LED_RED", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap LOG_OFF {
             get {
                 object obj = ResourceManager.GetObject("LOG_OFF", resourceCulture);
@@ -76,6 +116,26 @@ namespace AutoStockTrading.Properties {
         internal static System.Drawing.Bitmap LOG_ON {
             get {
                 object obj = ResourceManager.GetObject("LOG_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap LOGIN_OFF {
+            get {
+                object obj = ResourceManager.GetObject("LOGIN_OFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap LOGIN_ON {
+            get {
+                object obj = ResourceManager.GetObject("LOGIN_ON", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

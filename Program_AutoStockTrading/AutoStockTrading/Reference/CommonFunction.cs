@@ -36,6 +36,9 @@ namespace AutoStockTrading.Reference
         {
             Msg = $"[{DateTime.Now:HH:mm:ss:fff}] {Msg}"; // [19:23:34:212] Blah, blah, blah.
             Log.AddLog(Msg);
+
+            // 로그 form에 로그추가
+            Global.Form.Log?.AddLog(Msg);
         }
         public void Delay(int nMilliseconds)
         {

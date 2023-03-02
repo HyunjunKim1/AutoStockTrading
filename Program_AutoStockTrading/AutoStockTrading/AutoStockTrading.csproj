@@ -34,9 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup />
-  <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="BaseForm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -70,6 +68,12 @@
     <Compile Include="Forms\form_Log.Designer.cs">
       <DependentUpon>form_Log.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\form_Login.Designer.cs">
+      <DependentUpon>form_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\form_Status.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +103,9 @@
     <Compile Include="Reference\WhileThread.cs" />
     <EmbeddedResource Include="Forms\form_Log.resx">
       <DependentUpon>form_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\form_Status.resx">
+      <DependentUpon>form_Status.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_Main.resx">
       <DependentUpon>form_Main.cs</DependentUpon>
@@ -150,7 +157,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\CHECK_OFF.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOG_ON.png" />
   </ItemGroup>
@@ -162,6 +171,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\STATUS_OFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHECK_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN_OFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LED_RED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LED_GREEN.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

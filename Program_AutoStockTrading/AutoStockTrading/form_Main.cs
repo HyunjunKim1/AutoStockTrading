@@ -20,14 +20,19 @@ namespace AutoStockTrading
         public form_Main()
         {
             InitializeComponent();
+
+            lbl_Version.Text = Program.Version;
+            Global.Form.Main = this;
         }
 
         private int _scrNum = 5000;
 
         #region Form Events
-
-        private void m_Menu_Login_Click(object sender, EventArgs e)
+        private void form_Main_Load(object sender, EventArgs e)
         {
+            Global.Form.CreatePanelAndSetForm(pnl_Dock1, Global.Form.Status, true);
+            Global.Form.CreatePanelAndSetForm(pnl_Dock1, Global.Form.Log, true);
+
             if (axKHOpenAPI.CommConnect() == 0)
             {
                 //Global.AddLog($"Login 성공");
@@ -38,6 +43,11 @@ namespace AutoStockTrading
             {   // Log 추가 실패
                 return;
             }
+        }
+
+        private void Btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void m_Menu_Logout_Click(object sender, EventArgs e)
@@ -51,11 +61,6 @@ namespace AutoStockTrading
             axKHOpenAPI.CommTerminate();
 
             Global.AddLog("[System] Logout.");
-        }
-
-        private void m_Menu_Exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         #endregion
@@ -121,5 +126,7 @@ namespace AutoStockTrading
         }
 
         #endregion
+
+        
     }
 }
