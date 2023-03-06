@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BaseForm;
 
-namespace AutoStockTrading.Forms
+namespace AutoStockTrading.Forms.Dockable
 {
     public partial class form_Log : NotFlickingForm
     {

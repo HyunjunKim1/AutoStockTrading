@@ -45,6 +45,17 @@ namespace AutoStockTrading
             }
         }
 
+        private void form_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Global.Message(E_MESSAGE.YESNO, "Do you want to close the program?") != DialogResult.Yes)
+            {
+                e.Cancel = true;
+                return;
+            }
+
+            Global.Form.Dispose();
+        }
+
         private void Btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -112,8 +123,8 @@ namespace AutoStockTrading
             }
         }
 
+
         #endregion
 
-        
     }
 }

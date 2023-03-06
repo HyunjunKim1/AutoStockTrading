@@ -345,6 +345,7 @@ namespace AutoStockTrading
             this.Name = "form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_Main_FormClosing);
             this.Load += new System.EventHandler(this.form_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).EndInit();
             this.pnl_Main.ResumeLayout(false);

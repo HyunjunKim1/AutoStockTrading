@@ -1,5 +1,5 @@
 ﻿
-namespace AutoStockTrading.Forms
+namespace AutoStockTrading.Forms.Dockable
 {
     partial class form_Log
     {
