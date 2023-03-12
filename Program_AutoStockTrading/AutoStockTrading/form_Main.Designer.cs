@@ -75,7 +75,7 @@ namespace AutoStockTrading
             this.lbl_Log.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Log.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.lbl_Log.Location = new System.Drawing.Point(0, 1292);
+            this.lbl_Log.Location = new System.Drawing.Point(0, 1075);
             this.lbl_Log.Name = "lbl_Log";
             this.lbl_Log.Size = new System.Drawing.Size(2060, 25);
             this.lbl_Log.TabIndex = 2;
@@ -93,7 +93,7 @@ namespace AutoStockTrading
             this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Main.Location = new System.Drawing.Point(5, 5);
             this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(2050, 1282);
+            this.pnl_Main.Size = new System.Drawing.Size(2050, 1065);
             this.pnl_Main.TabIndex = 3;
             // 
             // pnl_Dock3
@@ -104,7 +104,7 @@ namespace AutoStockTrading
             this.pnl_Dock3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_Dock3.Location = new System.Drawing.Point(1184, 27);
             this.pnl_Dock3.Name = "pnl_Dock3";
-            this.pnl_Dock3.Size = new System.Drawing.Size(866, 1255);
+            this.pnl_Dock3.Size = new System.Drawing.Size(866, 1038);
             this.pnl_Dock3.TabIndex = 6;
             // 
             // pnl_Dock2
@@ -115,7 +115,7 @@ namespace AutoStockTrading
             this.pnl_Dock2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Dock2.Location = new System.Drawing.Point(300, 27);
             this.pnl_Dock2.Name = "pnl_Dock2";
-            this.pnl_Dock2.Size = new System.Drawing.Size(1750, 1255);
+            this.pnl_Dock2.Size = new System.Drawing.Size(1750, 1038);
             this.pnl_Dock2.TabIndex = 5;
             // 
             // pnl_Dock1
@@ -126,7 +126,7 @@ namespace AutoStockTrading
             this.pnl_Dock1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_Dock1.Location = new System.Drawing.Point(32, 27);
             this.pnl_Dock1.Name = "pnl_Dock1";
-            this.pnl_Dock1.Size = new System.Drawing.Size(268, 1255);
+            this.pnl_Dock1.Size = new System.Drawing.Size(268, 1038);
             this.pnl_Dock1.TabIndex = 4;
             // 
             // pnl_StatusIcon
@@ -138,7 +138,7 @@ namespace AutoStockTrading
             this.pnl_StatusIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_StatusIcon.Location = new System.Drawing.Point(0, 27);
             this.pnl_StatusIcon.Name = "pnl_StatusIcon";
-            this.pnl_StatusIcon.Size = new System.Drawing.Size(32, 1255);
+            this.pnl_StatusIcon.Size = new System.Drawing.Size(32, 1038);
             this.pnl_StatusIcon.TabIndex = 3;
             // 
             // iBtn_Login
@@ -151,7 +151,7 @@ namespace AutoStockTrading
             this.iBtn_Login.ImageOffset = new System.Drawing.Point(0, 0);
             this.iBtn_Login.ImageRotate = 0F;
             this.iBtn_Login.ImageSize = new System.Drawing.Size(30, 30);
-            this.iBtn_Login.Location = new System.Drawing.Point(0, 1218);
+            this.iBtn_Login.Location = new System.Drawing.Point(0, 1001);
             this.iBtn_Login.Name = "iBtn_Login";
             this.iBtn_Login.PressedState.ImageSize = new System.Drawing.Size(30, 30);
             this.iBtn_Login.Size = new System.Drawing.Size(32, 37);
@@ -279,7 +279,7 @@ namespace AutoStockTrading
             this.pnl_MarginRight.Enabled = false;
             this.pnl_MarginRight.Location = new System.Drawing.Point(2055, 0);
             this.pnl_MarginRight.Name = "pnl_MarginRight";
-            this.pnl_MarginRight.Size = new System.Drawing.Size(5, 1292);
+            this.pnl_MarginRight.Size = new System.Drawing.Size(5, 1075);
             this.pnl_MarginRight.TabIndex = 6;
             // 
             // pnl_MarginLeft
@@ -289,7 +289,7 @@ namespace AutoStockTrading
             this.pnl_MarginLeft.Enabled = false;
             this.pnl_MarginLeft.Location = new System.Drawing.Point(0, 0);
             this.pnl_MarginLeft.Name = "pnl_MarginLeft";
-            this.pnl_MarginLeft.Size = new System.Drawing.Size(5, 1292);
+            this.pnl_MarginLeft.Size = new System.Drawing.Size(5, 1075);
             this.pnl_MarginLeft.TabIndex = 7;
             // 
             // pnl_MarginBottom
@@ -297,7 +297,7 @@ namespace AutoStockTrading
             this.pnl_MarginBottom.BackColor = System.Drawing.Color.Transparent;
             this.pnl_MarginBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_MarginBottom.Enabled = false;
-            this.pnl_MarginBottom.Location = new System.Drawing.Point(5, 1287);
+            this.pnl_MarginBottom.Location = new System.Drawing.Point(5, 1070);
             this.pnl_MarginBottom.Name = "pnl_MarginBottom";
             this.pnl_MarginBottom.Size = new System.Drawing.Size(2050, 5);
             this.pnl_MarginBottom.TabIndex = 8;
@@ -333,7 +333,7 @@ namespace AutoStockTrading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2060, 1317);
+            this.ClientSize = new System.Drawing.Size(2060, 1100);
             this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.pnl_MarginTop);
             this.Controls.Add(this.pnl_MarginBottom);
