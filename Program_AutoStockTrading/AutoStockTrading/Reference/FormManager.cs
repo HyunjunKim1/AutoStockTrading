@@ -1,4 +1,4 @@
-﻿using AutoStockTrading.Forms;
+﻿using AutoStockTrading.Forms.Dockable;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -25,9 +25,12 @@ namespace AutoStockTrading.Reference
     class FormManager
     {
         public form_Main    Main;
+
+        // Dock Forms
         public form_Status  Status;
         public form_Log     Log;
 
+        // Popup Forms
 
         List<(Panel panel, Form form)> _pairList = new List<(Panel panel, Form form)>();
         List<Form> _etcFormList = new List<Form>();

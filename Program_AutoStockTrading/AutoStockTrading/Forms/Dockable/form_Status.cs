@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AutoStockTrading.Forms
+namespace AutoStockTrading.Forms.Dockable
 {
     public partial class form_Status : NotFlickingForm
     {

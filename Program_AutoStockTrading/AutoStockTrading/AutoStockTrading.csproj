@@ -62,23 +62,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\form_Log.cs">
+    <Compile Include="Forms\Dockable\form_Log.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_Log.Designer.cs">
+    <Compile Include="Forms\Dockable\form_Log.Designer.cs">
       <DependentUpon>form_Log.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\form_Login.cs">
+    <Compile Include="Forms\Popup\form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_Login.Designer.cs">
+    <Compile Include="Forms\Popup\form_Login.Designer.cs">
       <DependentUpon>form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\form_Status.cs">
+    <Compile Include="Forms\Dockable\form_Status.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\form_Status.Designer.cs">
+    <Compile Include="Forms\Dockable\form_Status.Designer.cs">
       <DependentUpon>form_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popup\form_Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popup\form_Message.Designer.cs">
+      <DependentUpon>form_Message.cs</DependentUpon>
     </Compile>
     <Compile Include="form_Main.cs">
       <SubType>Form</SubType>
@@ -101,11 +107,17 @@
     <Compile Include="Reference\FormManager.cs" />
     <Compile Include="Reference\KiwoomCode.cs" />
     <Compile Include="Reference\WhileThread.cs" />
-    <EmbeddedResource Include="Forms\form_Log.resx">
+    <EmbeddedResource Include="Forms\Dockable\form_Log.resx">
       <DependentUpon>form_Log.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\form_Status.resx">
+    <EmbeddedResource Include="Forms\Popup\form_Login.resx">
+      <DependentUpon>form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dockable\form_Status.resx">
       <DependentUpon>form_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popup\form_Message.resx">
+      <DependentUpon>form_Message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_Main.resx">
       <DependentUpon>form_Main.cs</DependentUpon>

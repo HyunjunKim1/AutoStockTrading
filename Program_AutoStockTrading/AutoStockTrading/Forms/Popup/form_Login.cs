@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AutoStockTrading.Forms
+namespace AutoStockTrading.Forms.Popup
 {
     public partial class form_Login : Form
     {
         public form_Login()
         {
             InitializeComponent();
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

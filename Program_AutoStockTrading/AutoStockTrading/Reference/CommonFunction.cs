@@ -7,6 +7,17 @@ using System.Windows.Forms;
 
 namespace AutoStockTrading.Reference
 {
+    public enum E_MESSAGE
+    {
+        YESNO,
+        OK,
+        YESNO_TIMER,
+        OK_TIMER
+    };
+}
+
+namespace AutoStockTrading.Reference
+{
     class CommonFunction
     {
 
