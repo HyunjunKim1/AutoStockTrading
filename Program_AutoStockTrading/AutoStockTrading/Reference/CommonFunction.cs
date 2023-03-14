@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoStockTrading.Forms.Popup;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,21 @@ namespace AutoStockTrading.Reference
                 Application.DoEvents();
                 _dtNow = DateTime.Now;
             }
+        }
+        public DialogResult Message(E_MESSAGE MessageType, string Message)
+        {
+            DialogResult DResult = DialogResult.None;
+
+            Global.Form.Main.Invoke(new Action(() =>
+            {
+                using (form_Message frm_Message = new form_Message(MessageType, Message))
+                {
+                    frm_Message.TopMost = true;
+                    DResult = frm_Message.ShowDialog();
+                }
+            }));
+
+            return DResult;
         }
         #endregion
     }

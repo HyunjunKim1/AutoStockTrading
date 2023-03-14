@@ -31,13 +31,13 @@ namespace AutoStockTrading.Forms.Popup
         {
             this.components = new System.ComponentModel.Container();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_Content = new Guna.UI2.WinForms.Guna2Button();
             this.btn_No = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Ok = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Yes = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,14 +46,6 @@ namespace AutoStockTrading.Forms.Popup
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.ShadowColor = System.Drawing.Color.Transparent;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // Panel1
             // 
@@ -111,6 +103,7 @@ namespace AutoStockTrading.Forms.Popup
             this.btn_No.Size = new System.Drawing.Size(120, 45);
             this.btn_No.TabIndex = 78;
             this.btn_No.Text = "No";
+            this.btn_No.Click += new System.EventHandler(this.btn_No_Click);
             // 
             // btn_Ok
             // 
@@ -132,6 +125,7 @@ namespace AutoStockTrading.Forms.Popup
             this.btn_Ok.Size = new System.Drawing.Size(120, 45);
             this.btn_Ok.TabIndex = 77;
             this.btn_Ok.Text = "OK";
+            this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
             // 
             // btn_Yes
             // 
@@ -153,6 +147,7 @@ namespace AutoStockTrading.Forms.Popup
             this.btn_Yes.Size = new System.Drawing.Size(120, 45);
             this.btn_Yes.TabIndex = 76;
             this.btn_Yes.Text = "Yes";
+            this.btn_Yes.Click += new System.EventHandler(this.btn_Yes_Click);
             // 
             // label2
             // 
@@ -164,6 +159,14 @@ namespace AutoStockTrading.Forms.Popup
             this.label2.Size = new System.Drawing.Size(97, 30);
             this.label2.TabIndex = 75;
             this.label2.Text = "Message";
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.ShadowColor = System.Drawing.Color.Transparent;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // form_Message
             // 
