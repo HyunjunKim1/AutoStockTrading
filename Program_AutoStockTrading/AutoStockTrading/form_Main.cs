@@ -111,8 +111,17 @@ namespace AutoStockTrading
 
         #region 키움 API 이벤트들
 
+        /// <summary>
+        /// 로그인 성공시 계좌정보 가져오기.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void axKHOpenAPI_OnEventConnect(object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
         {
+            Global.Runtime.ConditionalNameScrNo.Clear();
+            Global.Runtime.ConditionalName.Clear();
+            Global.Runtime.ConditionalIdx.Clear();
+
             if (Error.IsError(e.nErrCode))
             {
                 Global.AddLog($"[System] Login - " + Error.GetErrorMessage());

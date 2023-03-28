@@ -98,6 +98,9 @@
     <Compile Include="form_Splash.Designer.cs">
       <DependentUpon>form_Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Jun_CandleInfo.cs" />
+    <Compile Include="Models\Jun_RuntimeSet.cs" />
+    <Compile Include="Models\Jun_StocksInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reference\CommonCommunication.cs" />
@@ -199,5 +202,6 @@
   <ItemGroup>
     <None Include="Resources\LED_GREEN.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
