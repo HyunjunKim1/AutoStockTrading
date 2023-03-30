@@ -53,10 +53,22 @@ namespace AutoStockTrading
             this.pnl_MarginTop = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox_SelectedCondition = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripComboBox_Account = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripTextBox_TimerStatus = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.사용방법ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).BeginInit();
             this.pnl_Main.SuspendLayout();
+            this.pnl_Dock2.SuspendLayout();
             this.pnl_StatusIcon.SuspendLayout();
             this.pnl_Title.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // axKHOpenAPI
@@ -102,9 +114,9 @@ namespace AutoStockTrading
             this.pnl_Dock3.AutoScrollMargin = new System.Drawing.Size(0, 1);
             this.pnl_Dock3.AutoScrollMinSize = new System.Drawing.Size(0, 1);
             this.pnl_Dock3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_Dock3.Location = new System.Drawing.Point(1184, 27);
+            this.pnl_Dock3.Location = new System.Drawing.Point(1199, 27);
             this.pnl_Dock3.Name = "pnl_Dock3";
-            this.pnl_Dock3.Size = new System.Drawing.Size(866, 1038);
+            this.pnl_Dock3.Size = new System.Drawing.Size(851, 1038);
             this.pnl_Dock3.TabIndex = 6;
             // 
             // pnl_Dock2
@@ -112,6 +124,7 @@ namespace AutoStockTrading
             this.pnl_Dock2.AutoScroll = true;
             this.pnl_Dock2.AutoScrollMargin = new System.Drawing.Size(0, 1);
             this.pnl_Dock2.AutoScrollMinSize = new System.Drawing.Size(0, 1);
+            this.pnl_Dock2.Controls.Add(this.panel1);
             this.pnl_Dock2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Dock2.Location = new System.Drawing.Point(300, 27);
             this.pnl_Dock2.Name = "pnl_Dock2";
@@ -329,6 +342,77 @@ namespace AutoStockTrading
             this.guna2BorderlessForm1.DragStartTransparencyValue = 1D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.menuStrip1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1750, 1038);
+            this.panel1.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox3,
+            this.toolStripTextBox_SelectedCondition,
+            this.toolStripTextBox2,
+            this.toolStripComboBox_Account,
+            this.toolStripTextBox_TimerStatus,
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1750, 27);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripTextBox3
+            // 
+            this.toolStripTextBox3.Name = "toolStripTextBox3";
+            this.toolStripTextBox3.ReadOnly = true;
+            this.toolStripTextBox3.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox3.Text = "조건식:";
+            // 
+            // toolStripTextBox_SelectedCondition
+            // 
+            this.toolStripTextBox_SelectedCondition.BackColor = System.Drawing.Color.PaleGreen;
+            this.toolStripTextBox_SelectedCondition.Name = "toolStripTextBox_SelectedCondition";
+            this.toolStripTextBox_SelectedCondition.ReadOnly = true;
+            this.toolStripTextBox_SelectedCondition.Size = new System.Drawing.Size(320, 23);
+            this.toolStripTextBox_SelectedCondition.Text = "선택된 조건식이 없습니다. 조건식을 체크해주세요.";
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.ReadOnly = true;
+            this.toolStripTextBox2.Size = new System.Drawing.Size(60, 23);
+            this.toolStripTextBox2.Text = "계좌번호:";
+            // 
+            // toolStripComboBox_Account
+            // 
+            this.toolStripComboBox_Account.Name = "toolStripComboBox_Account";
+            this.toolStripComboBox_Account.Size = new System.Drawing.Size(121, 23);
+            // 
+            // toolStripTextBox_TimerStatus
+            // 
+            this.toolStripTextBox_TimerStatus.Name = "toolStripTextBox_TimerStatus";
+            this.toolStripTextBox_TimerStatus.Size = new System.Drawing.Size(150, 23);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.사용방법ToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(55, 23);
+            this.toolStripMenuItem1.Text = "도움말";
+            // 
+            // 사용방법ToolStripMenuItem
+            // 
+            this.사용방법ToolStripMenuItem.Name = "사용방법ToolStripMenuItem";
+            this.사용방법ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.사용방법ToolStripMenuItem.Text = "사용방법";
+            // 
             // form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -349,8 +433,13 @@ namespace AutoStockTrading
             this.Load += new System.EventHandler(this.form_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).EndInit();
             this.pnl_Main.ResumeLayout(false);
+            this.pnl_Dock2.ResumeLayout(false);
             this.pnl_StatusIcon.ResumeLayout(false);
             this.pnl_Title.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -379,6 +468,15 @@ namespace AutoStockTrading
         private Guna.UI2.WinForms.Guna2ImageButton iBtn_Login;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox3;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_SelectedCondition;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox_Account;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_TimerStatus;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 사용방법ToolStripMenuItem;
     }
 }
 

@@ -122,6 +122,17 @@ namespace AutoStockTrading
             Global.Runtime.ConditionalName.Clear();
             Global.Runtime.ConditionalIdx.Clear();
 
+            // 연결확인
+            if(axKHOpenAPI.GetConnectState() == 1)
+            {
+                // 조건식 가져오기
+                if(axKHOpenAPI.GetConditionLoad() == 1)
+                {
+                    string str_ID = axKHOpenAPI.GetLoginInfo("USER_ID");
+
+                }
+            }
+
             if (Error.IsError(e.nErrCode))
             {
                 Global.AddLog($"[System] Login - " + Error.GetErrorMessage());
