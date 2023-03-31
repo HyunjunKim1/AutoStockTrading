@@ -34,7 +34,7 @@ namespace AutoStockTrading
             try
             {
                 // 프로그램 중복실행 방지.
-                Mutex mutex = new Mutex(initiallyOwned: true, name: "DirectDocking", out bool isNewProgram);
+                Mutex mutex = new Mutex(initiallyOwned: true, name: "AutoStockTrading", out bool isNewProgram);
 
                 if (isNewProgram == false)
                 {

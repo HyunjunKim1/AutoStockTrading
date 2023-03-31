@@ -36,11 +36,26 @@ namespace AutoStockTrading
             this.axKHOpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
             this.lbl_Log = new System.Windows.Forms.Label();
             this.pnl_Main = new Guna.UI2.WinForms.Guna2Panel();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pnl_Dock2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
+            this.label8 = new System.Windows.Forms.Label();
+            this.gDgv_Condition = new System.Windows.Forms.DataGridView();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cLbox_ConditionList = new System.Windows.Forms.CheckedListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_Start = new System.Windows.Forms.Button();
+            this.btn_Stop = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripTextBox_SelectedCondition = new System.Windows.Forms.ToolStripTextBox();
@@ -49,6 +64,7 @@ namespace AutoStockTrading
             this.toolStripTextBox_Status = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.사용방법ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pnl_Dock1 = new System.Windows.Forms.Panel();
             this.pnl_StatusIcon = new System.Windows.Forms.Panel();
             this.iBtn_Login = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -66,31 +82,14 @@ namespace AutoStockTrading
             this.pnl_MarginTop = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
-            this.label8 = new System.Windows.Forms.Label();
-            this.gDgv_Condition = new System.Windows.Forms.DataGridView();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cLbox_ConditionList = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).BeginInit();
             this.pnl_Main.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.pnl_Dock2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.pnl_StatusIcon.SuspendLayout();
-            this.pnl_Title.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -104,6 +103,10 @@ namespace AutoStockTrading
             this.splitContainer14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gDgv_Condition)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.pnl_StatusIcon.SuspendLayout();
+            this.pnl_Title.SuspendLayout();
             this.SuspendLayout();
             // 
             // axKHOpenAPI
@@ -141,6 +144,28 @@ namespace AutoStockTrading
             this.pnl_Main.Name = "pnl_Main";
             this.pnl_Main.Size = new System.Drawing.Size(2050, 1065);
             this.pnl_Main.TabIndex = 3;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(275, 27);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1775, 1038);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage3.Controls.Add(this.pnl_Dock2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1767, 1012);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "1) 자동매매";
             // 
             // pnl_Dock2
             // 
@@ -188,8 +213,141 @@ namespace AutoStockTrading
             this.tabPage1.Text = "1) 매매조건";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // splitContainer3
+            // 
+            this.splitContainer3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.splitContainer11);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.groupBox1);
+            this.splitContainer3.Size = new System.Drawing.Size(1747, 947);
+            this.splitContainer3.SplitterDistance = 856;
+            this.splitContainer3.TabIndex = 16;
+            // 
+            // splitContainer11
+            // 
+            this.splitContainer11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer11.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer11.Name = "splitContainer11";
+            this.splitContainer11.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer11.Panel1
+            // 
+            this.splitContainer11.Panel1.Controls.Add(this.splitContainer14);
+            this.splitContainer11.Size = new System.Drawing.Size(856, 947);
+            this.splitContainer11.SplitterDistance = 473;
+            this.splitContainer11.TabIndex = 17;
+            // 
+            // splitContainer14
+            // 
+            this.splitContainer14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer14.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer14.Name = "splitContainer14";
+            this.splitContainer14.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer14.Panel1
+            // 
+            this.splitContainer14.Panel1.Controls.Add(this.label8);
+            // 
+            // splitContainer14.Panel2
+            // 
+            this.splitContainer14.Panel2.Controls.Add(this.gDgv_Condition);
+            this.splitContainer14.Size = new System.Drawing.Size(856, 473);
+            this.splitContainer14.SplitterDistance = 43;
+            this.splitContainer14.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 16);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Condition Setting";
+            // 
+            // gDgv_Condition
+            // 
+            this.gDgv_Condition.AllowUserToAddRows = false;
+            this.gDgv_Condition.AllowUserToDeleteRows = false;
+            this.gDgv_Condition.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gDgv_Condition.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gDgv_Condition.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gDgv_Condition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gDgv_Condition.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column11,
+            this.Column12});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gDgv_Condition.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gDgv_Condition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gDgv_Condition.Location = new System.Drawing.Point(0, 0);
+            this.gDgv_Condition.Name = "gDgv_Condition";
+            this.gDgv_Condition.RowHeadersVisible = false;
+            this.gDgv_Condition.RowTemplate.Height = 23;
+            this.gDgv_Condition.Size = new System.Drawing.Size(852, 422);
+            this.gDgv_Condition.TabIndex = 9;
+            this.gDgv_Condition.TabStop = false;
+            this.gDgv_Condition.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gDgv_Condition_CellContentClick);
+            this.gDgv_Condition.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.gDgv_Condition_DataError);
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "조건";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "설정";
+            this.Column12.Name = "Column12";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cLbox_ConditionList);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(883, 943);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "키움 조건 검색식 (모바일 X)";
+            // 
+            // cLbox_ConditionList
+            // 
+            this.cLbox_ConditionList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cLbox_ConditionList.FormattingEnabled = true;
+            this.cLbox_ConditionList.Location = new System.Drawing.Point(3, 17);
+            this.cLbox_ConditionList.Name = "cLbox_ConditionList";
+            this.cLbox_ConditionList.Size = new System.Drawing.Size(877, 923);
+            this.cLbox_ConditionList.TabIndex = 2;
+            this.cLbox_ConditionList.SelectedIndexChanged += new System.EventHandler(this.cLbox_ConditionList_SelectedIndexChanged);
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btn_Start);
+            this.tabPage2.Controls.Add(this.btn_Stop);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -197,6 +355,44 @@ namespace AutoStockTrading
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "2) 검색시작";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btn_Start
+            // 
+            this.btn_Start.Enabled = false;
+            this.btn_Start.Location = new System.Drawing.Point(817, 433);
+            this.btn_Start.Name = "btn_Start";
+            this.btn_Start.Size = new System.Drawing.Size(118, 40);
+            this.btn_Start.TabIndex = 14;
+            this.btn_Start.Text = "시  작";
+            this.btn_Start.UseVisualStyleBackColor = true;
+            // 
+            // btn_Stop
+            // 
+            this.btn_Stop.Enabled = false;
+            this.btn_Stop.Location = new System.Drawing.Point(817, 479);
+            this.btn_Stop.Name = "btn_Stop";
+            this.btn_Stop.Size = new System.Drawing.Size(118, 40);
+            this.btn_Stop.TabIndex = 15;
+            this.btn_Stop.Text = "정  지";
+            this.btn_Stop.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1753, 953);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "3) 조건검색식 & 로그";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1753, 953);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "4) 평가금 분석";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -257,8 +453,18 @@ namespace AutoStockTrading
             // 사용방법ToolStripMenuItem
             // 
             this.사용방법ToolStripMenuItem.Name = "사용방법ToolStripMenuItem";
-            this.사용방법ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.사용방법ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.사용방법ToolStripMenuItem.Text = "사용방법";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1767, 1012);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "2) 상승종목 캐쳐";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // pnl_Dock1
             // 
@@ -471,185 +677,6 @@ namespace AutoStockTrading
             this.guna2BorderlessForm1.DragStartTransparencyValue = 1D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(275, 27);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1775, 1038);
-            this.tabControl2.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage3.Controls.Add(this.pnl_Dock2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1767, 1012);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "1) 자동매매";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1767, 1012);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "2) 상승종목 캐쳐";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1753, 953);
-            this.tabPage5.TabIndex = 2;
-            this.tabPage5.Text = "3) 조건검색식 & 로그";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1753, 953);
-            this.tabPage6.TabIndex = 3;
-            this.tabPage6.Text = "4) 평가금 분석";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.splitContainer11);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer3.Size = new System.Drawing.Size(1747, 947);
-            this.splitContainer3.SplitterDistance = 856;
-            this.splitContainer3.TabIndex = 16;
-            // 
-            // splitContainer11
-            // 
-            this.splitContainer11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer11.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer11.Name = "splitContainer11";
-            this.splitContainer11.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer11.Panel1
-            // 
-            this.splitContainer11.Panel1.Controls.Add(this.splitContainer14);
-            this.splitContainer11.Size = new System.Drawing.Size(856, 947);
-            this.splitContainer11.SplitterDistance = 473;
-            this.splitContainer11.TabIndex = 17;
-            // 
-            // splitContainer14
-            // 
-            this.splitContainer14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer14.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer14.Name = "splitContainer14";
-            this.splitContainer14.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer14.Panel1
-            // 
-            this.splitContainer14.Panel1.Controls.Add(this.label8);
-            // 
-            // splitContainer14.Panel2
-            // 
-            this.splitContainer14.Panel2.Controls.Add(this.gDgv_Condition);
-            this.splitContainer14.Size = new System.Drawing.Size(856, 473);
-            this.splitContainer14.SplitterDistance = 43;
-            this.splitContainer14.TabIndex = 19;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 16);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Condition Setting";
-            // 
-            // gDgv_Condition
-            // 
-            this.gDgv_Condition.AllowUserToAddRows = false;
-            this.gDgv_Condition.AllowUserToDeleteRows = false;
-            this.gDgv_Condition.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gDgv_Condition.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gDgv_Condition.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gDgv_Condition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gDgv_Condition.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column11,
-            this.Column12});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gDgv_Condition.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gDgv_Condition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gDgv_Condition.Location = new System.Drawing.Point(0, 0);
-            this.gDgv_Condition.Name = "gDgv_Condition";
-            this.gDgv_Condition.RowHeadersVisible = false;
-            this.gDgv_Condition.RowTemplate.Height = 23;
-            this.gDgv_Condition.Size = new System.Drawing.Size(852, 422);
-            this.gDgv_Condition.TabIndex = 9;
-            this.gDgv_Condition.TabStop = false;
-            this.gDgv_Condition.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gDgv_Condition_CellContentClick);
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "조건";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "설정";
-            this.Column12.Name = "Column12";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cLbox_ConditionList);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(883, 943);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "키움 조건 검색식 (모바일 X)";
-            // 
-            // cLbox_ConditionList
-            // 
-            this.cLbox_ConditionList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cLbox_ConditionList.FormattingEnabled = true;
-            this.cLbox_ConditionList.Location = new System.Drawing.Point(3, 17);
-            this.cLbox_ConditionList.Name = "cLbox_ConditionList";
-            this.cLbox_ConditionList.Size = new System.Drawing.Size(877, 923);
-            this.cLbox_ConditionList.TabIndex = 2;
-            // 
             // form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -670,17 +697,13 @@ namespace AutoStockTrading
             this.Load += new System.EventHandler(this.form_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).EndInit();
             this.pnl_Main.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.pnl_Dock2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.pnl_StatusIcon.ResumeLayout(false);
-            this.pnl_Title.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
@@ -695,6 +718,11 @@ namespace AutoStockTrading
             this.splitContainer14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gDgv_Condition)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.pnl_StatusIcon.ResumeLayout(false);
+            this.pnl_Title.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -748,6 +776,8 @@ namespace AutoStockTrading
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button btn_Start;
+        private System.Windows.Forms.Button btn_Stop;
     }
 }
 

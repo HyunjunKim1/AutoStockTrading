@@ -23,6 +23,7 @@ namespace AutoStockTrading
 
             lbl_Version.Text = Program.Version;
             Global.Form.Main = this;
+
         }
 
         private int _scrNum = 5000;
@@ -62,6 +63,39 @@ namespace AutoStockTrading
         }
 
         #endregion
+
+        public void UpdateUI()
+        {
+            if(this.InvokeRequired) { this.Invoke(new Action(() => { UpdateUI(); })); return; }
+        }
+
+        private void RefreshUI(object sender, EventArgs e)
+        {
+            string splitStr = " § ";
+            toolStripTextBox_SelectedCondition.Text = "";
+            if(Global.Runtime.Now_Step > (int)OP_STEP.S0_STOP_SEARCH)
+            {
+                CheckedListBox cb = sender as CheckedListBox;
+                if(cb != null)
+                {
+                    Global.Message(E_MESSAGE.OK, "조건 검색중 조건식 변경은 불가능합니다. 검색을 중지합니다.\r\n조건식 변경 후 다시 시도하세요.");
+                    btn_Stop.PerformClick();
+                    return;
+                }
+            }
+
+            if (cLbox_ConditionList.CheckedItems.Count == 0)
+                toolStripTextBox_SelectedCondition.Text = "선택된 조건식이 없습니다.";
+            else if (cLbox_ConditionList.CheckedItems.Count > 20)
+                Global.Message(E_MESSAGE.OK, "키움증권의 조건식은 최대 20개까지만 선택가능합니다.");
+            else
+            {
+                foreach (var item in cLbox_ConditionList.CheckedItems)
+                    toolStripTextBox_SelectedCondition.Text += item + splitStr;
+                if (toolStripTextBox_SelectedCondition.Text.Length > splitStr.Length)
+                    toolStripTextBox_SelectedCondition.Text = toolStripTextBox_SelectedCondition.Text.Substring(0, toolStripTextBox_SelectedCondition.Text.Length - splitStr.Length);
+            }
+        }
 
         public void ChangeMainButtonColor(FORM_NAME form, bool isActivateColor) // ...FORM추가... 
         {
@@ -146,9 +180,24 @@ namespace AutoStockTrading
 
         #endregion
 
+        #region 매매조건 관련 Event
         private void gDgv_Condition_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (Global.Runtime.Now_Step > (int)OP_STEP.S0_STOP_SEARCH)
+                Global.Message(E_MESSAGE.OK, "조건 검색중엔 설정변경이 불가능합니다.");
         }
+        private void gDgv_Condition_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            Global.Message(E_MESSAGE.OK, "입력값이 잘못되었습니다.");
+            e.Cancel = false;
+            e.ThrowException = false;
+        }
+
+        private void cLbox_ConditionList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RefreshUI(sender, e);
+        }
+        #endregion
+
     }
 }
