@@ -31,11 +31,24 @@ namespace AutoStockTrading
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.axKHOpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
             this.lbl_Log = new System.Windows.Forms.Label();
             this.pnl_Main = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnl_Dock3 = new System.Windows.Forms.Panel();
             this.pnl_Dock2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox_SelectedCondition = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripComboBox_Account = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripTextBox_Status = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.사용방법ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Dock1 = new System.Windows.Forms.Panel();
             this.pnl_StatusIcon = new System.Windows.Forms.Panel();
             this.iBtn_Login = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -53,22 +66,44 @@ namespace AutoStockTrading
             this.pnl_MarginTop = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripTextBox_SelectedCondition = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripComboBox_Account = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripTextBox_TimerStatus = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.사용방법ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
+            this.label8 = new System.Windows.Forms.Label();
+            this.gDgv_Condition = new System.Windows.Forms.DataGridView();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cLbox_ConditionList = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).BeginInit();
             this.pnl_Main.SuspendLayout();
             this.pnl_Dock2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.pnl_StatusIcon.SuspendLayout();
             this.pnl_Title.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
+            this.splitContainer11.Panel1.SuspendLayout();
+            this.splitContainer11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
+            this.splitContainer14.Panel1.SuspendLayout();
+            this.splitContainer14.Panel2.SuspendLayout();
+            this.splitContainer14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gDgv_Condition)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // axKHOpenAPI
@@ -97,8 +132,7 @@ namespace AutoStockTrading
             // pnl_Main
             // 
             this.pnl_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.pnl_Main.Controls.Add(this.pnl_Dock3);
-            this.pnl_Main.Controls.Add(this.pnl_Dock2);
+            this.pnl_Main.Controls.Add(this.tabControl2);
             this.pnl_Main.Controls.Add(this.pnl_Dock1);
             this.pnl_Main.Controls.Add(this.pnl_StatusIcon);
             this.pnl_Main.Controls.Add(this.pnl_Title);
@@ -108,17 +142,6 @@ namespace AutoStockTrading
             this.pnl_Main.Size = new System.Drawing.Size(2050, 1065);
             this.pnl_Main.TabIndex = 3;
             // 
-            // pnl_Dock3
-            // 
-            this.pnl_Dock3.AutoScroll = true;
-            this.pnl_Dock3.AutoScrollMargin = new System.Drawing.Size(0, 1);
-            this.pnl_Dock3.AutoScrollMinSize = new System.Drawing.Size(0, 1);
-            this.pnl_Dock3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_Dock3.Location = new System.Drawing.Point(1199, 27);
-            this.pnl_Dock3.Name = "pnl_Dock3";
-            this.pnl_Dock3.Size = new System.Drawing.Size(851, 1038);
-            this.pnl_Dock3.TabIndex = 6;
-            // 
             // pnl_Dock2
             // 
             this.pnl_Dock2.AutoScroll = true;
@@ -126,10 +149,116 @@ namespace AutoStockTrading
             this.pnl_Dock2.AutoScrollMinSize = new System.Drawing.Size(0, 1);
             this.pnl_Dock2.Controls.Add(this.panel1);
             this.pnl_Dock2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Dock2.Location = new System.Drawing.Point(300, 27);
+            this.pnl_Dock2.Location = new System.Drawing.Point(3, 3);
             this.pnl_Dock2.Name = "pnl_Dock2";
-            this.pnl_Dock2.Size = new System.Drawing.Size(1750, 1038);
+            this.pnl_Dock2.Size = new System.Drawing.Size(1761, 1006);
             this.pnl_Dock2.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Controls.Add(this.menuStrip1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1761, 1006);
+            this.panel1.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 27);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1761, 979);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.splitContainer3);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1753, 953);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "1) 매매조건";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1753, 953);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "2) 검색시작";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox3,
+            this.toolStripTextBox_SelectedCondition,
+            this.toolStripTextBox2,
+            this.toolStripComboBox_Account,
+            this.toolStripTextBox_Status,
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1761, 27);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripTextBox3
+            // 
+            this.toolStripTextBox3.Name = "toolStripTextBox3";
+            this.toolStripTextBox3.ReadOnly = true;
+            this.toolStripTextBox3.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox3.Text = "조건식:";
+            // 
+            // toolStripTextBox_SelectedCondition
+            // 
+            this.toolStripTextBox_SelectedCondition.BackColor = System.Drawing.Color.DarkGray;
+            this.toolStripTextBox_SelectedCondition.Name = "toolStripTextBox_SelectedCondition";
+            this.toolStripTextBox_SelectedCondition.ReadOnly = true;
+            this.toolStripTextBox_SelectedCondition.Size = new System.Drawing.Size(320, 23);
+            this.toolStripTextBox_SelectedCondition.Text = "선택된 조건식이 없습니다. 조건식을 체크해주세요.";
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.ReadOnly = true;
+            this.toolStripTextBox2.Size = new System.Drawing.Size(60, 23);
+            this.toolStripTextBox2.Text = "계좌번호:";
+            // 
+            // toolStripComboBox_Account
+            // 
+            this.toolStripComboBox_Account.Name = "toolStripComboBox_Account";
+            this.toolStripComboBox_Account.Size = new System.Drawing.Size(121, 23);
+            // 
+            // toolStripTextBox_Status
+            // 
+            this.toolStripTextBox_Status.Name = "toolStripTextBox_Status";
+            this.toolStripTextBox_Status.Size = new System.Drawing.Size(150, 23);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.사용방법ToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(55, 23);
+            this.toolStripMenuItem1.Text = "도움말";
+            // 
+            // 사용방법ToolStripMenuItem
+            // 
+            this.사용방법ToolStripMenuItem.Name = "사용방법ToolStripMenuItem";
+            this.사용방법ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.사용방법ToolStripMenuItem.Text = "사용방법";
             // 
             // pnl_Dock1
             // 
@@ -139,7 +268,7 @@ namespace AutoStockTrading
             this.pnl_Dock1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_Dock1.Location = new System.Drawing.Point(32, 27);
             this.pnl_Dock1.Name = "pnl_Dock1";
-            this.pnl_Dock1.Size = new System.Drawing.Size(268, 1038);
+            this.pnl_Dock1.Size = new System.Drawing.Size(243, 1038);
             this.pnl_Dock1.TabIndex = 4;
             // 
             // pnl_StatusIcon
@@ -342,76 +471,184 @@ namespace AutoStockTrading
             this.guna2BorderlessForm1.DragStartTransparencyValue = 1D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // panel1
+            // tabControl2
             // 
-            this.panel1.Controls.Add(this.menuStrip1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1750, 1038);
-            this.panel1.TabIndex = 0;
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(275, 27);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1775, 1038);
+            this.tabControl2.TabIndex = 0;
             // 
-            // menuStrip1
+            // tabPage3
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox3,
-            this.toolStripTextBox_SelectedCondition,
-            this.toolStripTextBox2,
-            this.toolStripComboBox_Account,
-            this.toolStripTextBox_TimerStatus,
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1750, 27);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage3.Controls.Add(this.pnl_Dock2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1767, 1012);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "1) 자동매매";
             // 
-            // toolStripTextBox3
+            // tabPage4
             // 
-            this.toolStripTextBox3.Name = "toolStripTextBox3";
-            this.toolStripTextBox3.ReadOnly = true;
-            this.toolStripTextBox3.Size = new System.Drawing.Size(50, 23);
-            this.toolStripTextBox3.Text = "조건식:";
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1767, 1012);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "2) 상승종목 캐쳐";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // toolStripTextBox_SelectedCondition
+            // tabPage5
             // 
-            this.toolStripTextBox_SelectedCondition.BackColor = System.Drawing.Color.PaleGreen;
-            this.toolStripTextBox_SelectedCondition.Name = "toolStripTextBox_SelectedCondition";
-            this.toolStripTextBox_SelectedCondition.ReadOnly = true;
-            this.toolStripTextBox_SelectedCondition.Size = new System.Drawing.Size(320, 23);
-            this.toolStripTextBox_SelectedCondition.Text = "선택된 조건식이 없습니다. 조건식을 체크해주세요.";
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1753, 953);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "3) 조건검색식 & 로그";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // toolStripTextBox2
+            // tabPage6
             // 
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.ReadOnly = true;
-            this.toolStripTextBox2.Size = new System.Drawing.Size(60, 23);
-            this.toolStripTextBox2.Text = "계좌번호:";
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1753, 953);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "4) 평가금 분석";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // toolStripComboBox_Account
+            // splitContainer3
             // 
-            this.toolStripComboBox_Account.Name = "toolStripComboBox_Account";
-            this.toolStripComboBox_Account.Size = new System.Drawing.Size(121, 23);
+            this.splitContainer3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer3.Name = "splitContainer3";
             // 
-            // toolStripTextBox_TimerStatus
+            // splitContainer3.Panel1
             // 
-            this.toolStripTextBox_TimerStatus.Name = "toolStripTextBox_TimerStatus";
-            this.toolStripTextBox_TimerStatus.Size = new System.Drawing.Size(150, 23);
+            this.splitContainer3.Panel1.Controls.Add(this.splitContainer11);
             // 
-            // toolStripMenuItem1
+            // splitContainer3.Panel2
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.사용방법ToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(55, 23);
-            this.toolStripMenuItem1.Text = "도움말";
+            this.splitContainer3.Panel2.Controls.Add(this.groupBox1);
+            this.splitContainer3.Size = new System.Drawing.Size(1747, 947);
+            this.splitContainer3.SplitterDistance = 856;
+            this.splitContainer3.TabIndex = 16;
             // 
-            // 사용방법ToolStripMenuItem
+            // splitContainer11
             // 
-            this.사용방법ToolStripMenuItem.Name = "사용방법ToolStripMenuItem";
-            this.사용방법ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.사용방법ToolStripMenuItem.Text = "사용방법";
+            this.splitContainer11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer11.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer11.Name = "splitContainer11";
+            this.splitContainer11.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer11.Panel1
+            // 
+            this.splitContainer11.Panel1.Controls.Add(this.splitContainer14);
+            this.splitContainer11.Size = new System.Drawing.Size(856, 947);
+            this.splitContainer11.SplitterDistance = 473;
+            this.splitContainer11.TabIndex = 17;
+            // 
+            // splitContainer14
+            // 
+            this.splitContainer14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer14.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer14.Name = "splitContainer14";
+            this.splitContainer14.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer14.Panel1
+            // 
+            this.splitContainer14.Panel1.Controls.Add(this.label8);
+            // 
+            // splitContainer14.Panel2
+            // 
+            this.splitContainer14.Panel2.Controls.Add(this.gDgv_Condition);
+            this.splitContainer14.Size = new System.Drawing.Size(856, 473);
+            this.splitContainer14.SplitterDistance = 43;
+            this.splitContainer14.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 16);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Condition Setting";
+            // 
+            // gDgv_Condition
+            // 
+            this.gDgv_Condition.AllowUserToAddRows = false;
+            this.gDgv_Condition.AllowUserToDeleteRows = false;
+            this.gDgv_Condition.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gDgv_Condition.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gDgv_Condition.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gDgv_Condition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gDgv_Condition.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column11,
+            this.Column12});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gDgv_Condition.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gDgv_Condition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gDgv_Condition.Location = new System.Drawing.Point(0, 0);
+            this.gDgv_Condition.Name = "gDgv_Condition";
+            this.gDgv_Condition.RowHeadersVisible = false;
+            this.gDgv_Condition.RowTemplate.Height = 23;
+            this.gDgv_Condition.Size = new System.Drawing.Size(852, 422);
+            this.gDgv_Condition.TabIndex = 9;
+            this.gDgv_Condition.TabStop = false;
+            this.gDgv_Condition.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gDgv_Condition_CellContentClick);
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "조건";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "설정";
+            this.Column12.Name = "Column12";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cLbox_ConditionList);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(883, 943);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "키움 조건 검색식 (모바일 X)";
+            // 
+            // cLbox_ConditionList
+            // 
+            this.cLbox_ConditionList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cLbox_ConditionList.FormattingEnabled = true;
+            this.cLbox_ConditionList.Location = new System.Drawing.Point(3, 17);
+            this.cLbox_ConditionList.Name = "cLbox_ConditionList";
+            this.cLbox_ConditionList.Size = new System.Drawing.Size(877, 923);
+            this.cLbox_ConditionList.TabIndex = 2;
             // 
             // form_Main
             // 
@@ -434,12 +671,30 @@ namespace AutoStockTrading
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).EndInit();
             this.pnl_Main.ResumeLayout(false);
             this.pnl_Dock2.ResumeLayout(false);
-            this.pnl_StatusIcon.ResumeLayout(false);
-            this.pnl_Title.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.pnl_StatusIcon.ResumeLayout(false);
+            this.pnl_Title.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            this.splitContainer11.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
+            this.splitContainer11.ResumeLayout(false);
+            this.splitContainer14.Panel1.ResumeLayout(false);
+            this.splitContainer14.Panel1.PerformLayout();
+            this.splitContainer14.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).EndInit();
+            this.splitContainer14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gDgv_Condition)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -459,7 +714,6 @@ namespace AutoStockTrading
         private System.Windows.Forms.Panel pnl_MarginBottom;
         private System.Windows.Forms.Panel pnl_MarginTop;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnl_Dock3;
         private System.Windows.Forms.Panel pnl_Dock2;
         private System.Windows.Forms.Panel pnl_Dock1;
         private System.Windows.Forms.Panel pnl_StatusIcon;
@@ -474,9 +728,26 @@ namespace AutoStockTrading
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox_SelectedCondition;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox_Account;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_TimerStatus;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_Status;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 사용방법ToolStripMenuItem;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.SplitContainer splitContainer11;
+        private System.Windows.Forms.SplitContainer splitContainer14;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView gDgv_Condition;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckedListBox cLbox_ConditionList;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
 

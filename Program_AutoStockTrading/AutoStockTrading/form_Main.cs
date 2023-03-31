@@ -146,5 +146,9 @@ namespace AutoStockTrading
 
         #endregion
 
+        private void gDgv_Condition_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
