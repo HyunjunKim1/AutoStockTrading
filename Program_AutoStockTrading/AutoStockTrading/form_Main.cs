@@ -126,7 +126,7 @@ namespace AutoStockTrading
             switch (tag)
             {
                 case FORM_NAME.STATUS:
-                    Global.Form.DockOrHide(Global.Form.Status);
+                    Global.Form.DockOrHide(Global.Form .Status);
                     break;
                 case FORM_NAME.LOG:
                     Global.Form.DockOrHide(Global.Form.Log);
