@@ -64,6 +64,7 @@ namespace AutoStockTrading.Reference
 
         // 주식 Class =============================================
         public Jun_RuntimeSet Runtime       = new Jun_RuntimeSet();
+        public Jun_StocksInfo StockInfo     = new Jun_StocksInfo();
         // ========================================================
 
         #region Global Function

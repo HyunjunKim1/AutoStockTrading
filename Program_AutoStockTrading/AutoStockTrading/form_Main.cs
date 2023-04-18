@@ -1,4 +1,5 @@
-﻿using AutoStockTrading.Reference;
+﻿using AutoStockTrading.Models;
+using AutoStockTrading.Reference;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -199,5 +200,67 @@ namespace AutoStockTrading
         }
         #endregion
 
+        List<Jun_StocksInfo> Search_StockInfo = new List<Jun_StocksInfo>();
+        #region 2) 검색 이벤트
+        private void btn_Start_Click(object sender, EventArgs e)
+        {
+            btn_AllSell.Enabled = true;
+
+            if(cLbox_ConditionList.CheckedItems.Count > 0)
+            {
+                btn_Start.Enabled = false;
+                btn_Stop.Enabled = true;
+
+                Global.Runtime.Initialize();
+                Global.Runtime.Now_Step = (int)OP_STEP.S1_VERIFICATION;
+            }
+            else if(cLbox_ConditionList.CheckedItems.Count == 0)
+            {
+                Global.Message(E_MESSAGE.OK, "선택 조건식은 최소 하나 이상이여야합니다.");
+            }
+            else
+            {
+                Global.Message(E_MESSAGE.OK,"키움서버 제약으로 1분 후 재시작 해주세요.");
+            }
+        }
+
+        private void btn_Stop_Click(object sender, EventArgs e)
+        {
+            Global.AddLog("Stop Condition Search!");
+            btn_AllSell.Enabled = false;
+            btn_Start.Enabled = true;
+            btn_Stop.Enabled = false;
+
+            Global.Runtime.Now_Step = (int)OP_STEP.S0_STOP_SEARCH;
+            for(int i = 0; i < cLbox_ConditionList.Items.Count; i++)
+            {
+                if(cLbox_ConditionList.GetItemChecked(i))
+                {
+                    axKHOpenAPI.SendConditionStop(Global.Runtime.ConditionalNameScrNo[i], Global.Runtime.ConditionalName[i], Global.Runtime.ConditionalIdx[i]);
+                    Thread.Sleep(500);
+                }
+            }
+        }
+
+        private void btn_CancelOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_AllSell_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Restart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_AccountRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
