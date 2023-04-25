@@ -86,7 +86,13 @@
     <Compile Include="Forms\Popup\form_Message.Designer.cs">
       <DependentUpon>form_Message.cs</DependentUpon>
     </Compile>
+    <Compile Include="p_form_Main.CommControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="p_form_Main.DataReceive.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form_Main.Designer.cs">

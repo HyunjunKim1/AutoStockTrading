@@ -29,6 +29,11 @@ namespace AutoStockTrading
 
         private int _scrNum = 5000;
 
+        // Datatable
+        DataSet _dsAll = new DataSet();
+        DataTable _dtMainList = new DataTable();
+        DataTable _dtConditionList = new DataTable();
+
         #region Form Events
         private void form_Main_Load(object sender, EventArgs e)
         {
@@ -144,43 +149,7 @@ namespace AutoStockTrading
             _scrNum = 5000;
         }
 
-        #region 키움 API 이벤트들
-
-        /// <summary>
-        /// 로그인 성공시 계좌정보 가져오기.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void axKHOpenAPI_OnEventConnect(object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
-        {
-            Global.Runtime.ConditionalNameScrNo.Clear();
-            Global.Runtime.ConditionalName.Clear();
-            Global.Runtime.ConditionalIdx.Clear();
-
-            // 연결확인
-            if(axKHOpenAPI.GetConnectState() == 1)
-            {
-                // 조건식 가져오기
-                if(axKHOpenAPI.GetConditionLoad() == 1)
-                {
-                    string str_ID = axKHOpenAPI.GetLoginInfo("USER_ID");
-
-                }
-            }
-
-            if (Error.IsError(e.nErrCode))
-            {
-                Global.AddLog($"[System] Login - " + Error.GetErrorMessage());
-            }
-            else
-            {
-                Global.AddLog($"[System] Login - " + Error.GetErrorMessage());
-            }
-        }
-
-
-        #endregion
-
+      
         #region 매매조건 관련 Event
         private void gDgv_Condition_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -262,5 +231,6 @@ namespace AutoStockTrading
 
         }
         #endregion
+
     }
 }
