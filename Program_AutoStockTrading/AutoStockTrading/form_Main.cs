@@ -28,11 +28,27 @@ namespace AutoStockTrading
         }
 
         private int _scrNum = 5000;
+        private readonly object TrLock = new object();
+
+        // 오토리셋이벤트
+        AutoResetEvent arGetDataInfo = new AutoResetEvent(false);
+        AutoResetEvent arGetDataCondSearching = new AutoResetEvent(false);
+        AutoResetEvent arGetDataProfit = new AutoResetEvent(false);
+        AutoResetEvent arGetDataProfitinDay = new AutoResetEvent(false);
+        AutoResetEvent arReqMCN = new AutoResetEvent(false);
 
         // Datatable
         DataSet _dsAll = new DataSet();
         DataTable _dtMainList = new DataTable();
         DataTable _dtConditionList = new DataTable();
+        DataTable _dtBuyAndSellCondition = new DataTable();
+        DataTable _dtBalance = new DataTable();
+        DataTable _dtAllOrderLog = new DataTable();
+        DataTable _dt_CashRatio_of_totalValuation = new DataTable();
+
+
+        List<string> lstStocksCode = new List<string>();
+        List<Jun_StocksInfo> lstSearch_HVStocks = new List<Jun_StocksInfo>();
 
         #region Form Events
         private void form_Main_Load(object sender, EventArgs e)
