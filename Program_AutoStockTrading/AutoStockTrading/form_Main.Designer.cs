@@ -206,7 +206,7 @@ namespace AutoStockTrading
             this.lbl_Log.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.lbl_Log.Location = new System.Drawing.Point(0, 1075);
             this.lbl_Log.Name = "lbl_Log";
-            this.lbl_Log.Size = new System.Drawing.Size(2060, 25);
+            this.lbl_Log.Size = new System.Drawing.Size(1940, 25);
             this.lbl_Log.TabIndex = 2;
             this.lbl_Log.Text = "[04:34:40:617] [System] Successfully loaded the program.";
             this.lbl_Log.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,7 +221,7 @@ namespace AutoStockTrading
             this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Main.Location = new System.Drawing.Point(5, 5);
             this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(2050, 1065);
+            this.pnl_Main.Size = new System.Drawing.Size(1930, 1065);
             this.pnl_Main.TabIndex = 3;
             // 
             // tabControl2
@@ -232,7 +232,7 @@ namespace AutoStockTrading
             this.tabControl2.Location = new System.Drawing.Point(275, 27);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1775, 1038);
+            this.tabControl2.Size = new System.Drawing.Size(1655, 1038);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage3
@@ -242,7 +242,7 @@ namespace AutoStockTrading
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1767, 1012);
+            this.tabPage3.Size = new System.Drawing.Size(1647, 1012);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "1) 자동매매";
             // 
@@ -255,7 +255,7 @@ namespace AutoStockTrading
             this.pnl_Dock2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Dock2.Location = new System.Drawing.Point(3, 3);
             this.pnl_Dock2.Name = "pnl_Dock2";
-            this.pnl_Dock2.Size = new System.Drawing.Size(1761, 1006);
+            this.pnl_Dock2.Size = new System.Drawing.Size(1641, 1006);
             this.pnl_Dock2.TabIndex = 5;
             // 
             // panel1
@@ -265,7 +265,7 @@ namespace AutoStockTrading
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1761, 1006);
+            this.panel1.Size = new System.Drawing.Size(1641, 1006);
             this.panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -278,7 +278,7 @@ namespace AutoStockTrading
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1761, 979);
+            this.tabControl1.Size = new System.Drawing.Size(1641, 979);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -287,7 +287,7 @@ namespace AutoStockTrading
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1753, 953);
+            this.tabPage1.Size = new System.Drawing.Size(1633, 953);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "1) 매매조건";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -306,8 +306,8 @@ namespace AutoStockTrading
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer3.Size = new System.Drawing.Size(1747, 947);
-            this.splitContainer3.SplitterDistance = 856;
+            this.splitContainer3.Size = new System.Drawing.Size(1627, 947);
+            this.splitContainer3.SplitterDistance = 797;
             this.splitContainer3.TabIndex = 16;
             // 
             // splitContainer11
@@ -321,7 +321,7 @@ namespace AutoStockTrading
             // splitContainer11.Panel1
             // 
             this.splitContainer11.Panel1.Controls.Add(this.splitContainer14);
-            this.splitContainer11.Size = new System.Drawing.Size(856, 947);
+            this.splitContainer11.Size = new System.Drawing.Size(797, 947);
             this.splitContainer11.SplitterDistance = 473;
             this.splitContainer11.TabIndex = 17;
             // 
@@ -340,7 +340,7 @@ namespace AutoStockTrading
             // splitContainer14.Panel2
             // 
             this.splitContainer14.Panel2.Controls.Add(this.gDgv_Condition);
-            this.splitContainer14.Size = new System.Drawing.Size(856, 473);
+            this.splitContainer14.Size = new System.Drawing.Size(797, 473);
             this.splitContainer14.SplitterDistance = 43;
             this.splitContainer14.TabIndex = 19;
             // 
@@ -386,7 +386,7 @@ namespace AutoStockTrading
             this.gDgv_Condition.Name = "gDgv_Condition";
             this.gDgv_Condition.RowHeadersVisible = false;
             this.gDgv_Condition.RowTemplate.Height = 23;
-            this.gDgv_Condition.Size = new System.Drawing.Size(852, 422);
+            this.gDgv_Condition.Size = new System.Drawing.Size(793, 422);
             this.gDgv_Condition.TabIndex = 9;
             this.gDgv_Condition.TabStop = false;
             this.gDgv_Condition.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gDgv_Condition_CellContentClick);
@@ -408,7 +408,7 @@ namespace AutoStockTrading
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(883, 943);
+            this.groupBox1.Size = new System.Drawing.Size(822, 943);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "키움 조건 검색식 (모바일 X)";
@@ -419,7 +419,7 @@ namespace AutoStockTrading
             this.cLbox_ConditionList.FormattingEnabled = true;
             this.cLbox_ConditionList.Location = new System.Drawing.Point(3, 17);
             this.cLbox_ConditionList.Name = "cLbox_ConditionList";
-            this.cLbox_ConditionList.Size = new System.Drawing.Size(877, 923);
+            this.cLbox_ConditionList.Size = new System.Drawing.Size(816, 923);
             this.cLbox_ConditionList.TabIndex = 2;
             this.cLbox_ConditionList.SelectedIndexChanged += new System.EventHandler(this.cLbox_ConditionList_SelectedIndexChanged);
             // 
@@ -1010,7 +1010,7 @@ namespace AutoStockTrading
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1761, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1641, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1159,7 +1159,7 @@ namespace AutoStockTrading
             this.pnl_Title.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.pnl_Title.Location = new System.Drawing.Point(0, 0);
             this.pnl_Title.Name = "pnl_Title";
-            this.pnl_Title.Size = new System.Drawing.Size(2050, 27);
+            this.pnl_Title.Size = new System.Drawing.Size(1930, 27);
             this.pnl_Title.TabIndex = 1;
             // 
             // label1
@@ -1177,7 +1177,7 @@ namespace AutoStockTrading
             // 
             this.lbl_Version.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Version.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_Version.Location = new System.Drawing.Point(1874, 0);
+            this.lbl_Version.Location = new System.Drawing.Point(1754, 0);
             this.lbl_Version.Name = "lbl_Version";
             this.lbl_Version.Size = new System.Drawing.Size(86, 27);
             this.lbl_Version.TabIndex = 4;
@@ -1192,7 +1192,7 @@ namespace AutoStockTrading
             this.guna2ControlBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1960, 0);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1840, 0);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(30, 27);
             this.guna2ControlBox3.TabIndex = 3;
@@ -1205,7 +1205,7 @@ namespace AutoStockTrading
             this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1990, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1870, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(30, 27);
             this.guna2ControlBox2.TabIndex = 2;
@@ -1218,7 +1218,7 @@ namespace AutoStockTrading
             this.Btn_Close.Dock = System.Windows.Forms.DockStyle.Right;
             this.Btn_Close.FillColor = System.Drawing.Color.Transparent;
             this.Btn_Close.IconColor = System.Drawing.Color.Black;
-            this.Btn_Close.Location = new System.Drawing.Point(2020, 0);
+            this.Btn_Close.Location = new System.Drawing.Point(1900, 0);
             this.Btn_Close.Name = "Btn_Close";
             this.Btn_Close.Size = new System.Drawing.Size(30, 27);
             this.Btn_Close.TabIndex = 1;
@@ -1229,7 +1229,7 @@ namespace AutoStockTrading
             this.pnl_MarginRight.BackColor = System.Drawing.Color.Transparent;
             this.pnl_MarginRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_MarginRight.Enabled = false;
-            this.pnl_MarginRight.Location = new System.Drawing.Point(2055, 0);
+            this.pnl_MarginRight.Location = new System.Drawing.Point(1935, 0);
             this.pnl_MarginRight.Name = "pnl_MarginRight";
             this.pnl_MarginRight.Size = new System.Drawing.Size(5, 1075);
             this.pnl_MarginRight.TabIndex = 6;
@@ -1251,7 +1251,7 @@ namespace AutoStockTrading
             this.pnl_MarginBottom.Enabled = false;
             this.pnl_MarginBottom.Location = new System.Drawing.Point(5, 1070);
             this.pnl_MarginBottom.Name = "pnl_MarginBottom";
-            this.pnl_MarginBottom.Size = new System.Drawing.Size(2050, 5);
+            this.pnl_MarginBottom.Size = new System.Drawing.Size(1930, 5);
             this.pnl_MarginBottom.TabIndex = 8;
             // 
             // pnl_MarginTop
@@ -1261,7 +1261,7 @@ namespace AutoStockTrading
             this.pnl_MarginTop.Enabled = false;
             this.pnl_MarginTop.Location = new System.Drawing.Point(5, 0);
             this.pnl_MarginTop.Name = "pnl_MarginTop";
-            this.pnl_MarginTop.Size = new System.Drawing.Size(2050, 5);
+            this.pnl_MarginTop.Size = new System.Drawing.Size(1930, 5);
             this.pnl_MarginTop.TabIndex = 9;
             // 
             // guna2DragControl1
@@ -1285,7 +1285,7 @@ namespace AutoStockTrading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2060, 1100);
+            this.ClientSize = new System.Drawing.Size(1940, 1100);
             this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.pnl_MarginTop);
             this.Controls.Add(this.pnl_MarginBottom);
