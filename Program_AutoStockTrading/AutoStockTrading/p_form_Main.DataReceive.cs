@@ -164,7 +164,7 @@ namespace AutoStockTrading
 
         private void axKHOpenAPI_OnReceiveRealCondition(object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveRealConditionEvent e)
         {
-
+            // 아....
         }
         #endregion
     }
